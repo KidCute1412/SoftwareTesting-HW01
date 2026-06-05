@@ -719,28 +719,169 @@ Hồ Tuấn Thanh
 
 *Liệt kê 20 lỗi phần mềm công bố công khai từ năm 2022 đến 2026 (Ít nhất 5 lỗi liên quan trực tiếp đến AI/LLM).*
 
-| STT | Tên lỗi & Nguồn dẫn chứng | Liên quan AI/LLM? | Mô tả ngắn & Mức độ nghiêm trọng | Hậu quả | Giải pháp khắc phục | Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi này |
-|:---:|---|:---:|---|---|---|---|
-| 1 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 2 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 3 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 4 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 5 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 6 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 7 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 8 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 9 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 10 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 11 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 12 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 13 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 14 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 15 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 16 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 17 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 18 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 19 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
-| 20 | [Tên lỗi](link_nguon) | Có / Không | - Mô tả: <br> - Severity: | | | - Sai sót của AI: |
+
+
+#### Lỗi 1: Lỗi Air Canada Chatbot Ngộ nhận Chính sách (2024)
+- **Loại lỗi:** AI/LLM
+- **Nguồn dẫn chứng:** [CanLII - 2024 BCCRT 149](https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html)
+- **Mô tả & Mức độ nghiêm trọng:** Chatbot hỗ trợ khách hàng của hãng hàng không Air Canada sử dụng mô hình ngôn ngữ lớn để trả lời câu hỏi tự động. Khi khách hàng Jake Moffatt hỏi về chính sách hoàn vé tang chế (bereavement fare), chatbot đã đưa ra thông tin sai lệch rằng hành khách có thể mua vé giá thường rồi xin hoàn lại tiền trong vòng 90 ngày, trong khi chính sách thực tế yêu cầu phải xin trước khi bay. Mức độ nghiêm trọng: High (Ảnh hưởng trực tiếp đến uy tín pháp lý và tài chính).
+- **Hậu quả:** Hãng hàng không bị kiện ra Tòa án Giải quyết Tranh chấp Dân sự British Columbia (BCCRT). Tòa phán quyết Air Canada phải bồi thường chênh lệch giá vé và chi phí pháp lý cho khách hàng, bác bỏ lập luận của hãng rằng chatbot là một "thực thể pháp lý độc lập" tự chịu trách nhiệm.
+- **Giải pháp khắc phục:** Air Canada phải vô hiệu hóa chatbot để cập nhật, cấu hình lại hệ thống RAG (Retrieval-Augmented Generation) để chỉ trả lời dựa trên kho thông tin chính thức đã qua kiểm duyệt nghiêm ngặt, đồng thời thiết lập các chốt chặn/xác thực thông tin quan trọng trước khi gửi đến người dùng.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI khi giải thích về lỗi này có thể bị ảo tưởng quy trách nhiệm pháp lý trực tiếp cho "bản thân công nghệ AI" (cho rằng AI có tư cách pháp nhân hoặc AI tự ý "nói dối"), thay vì nhìn nhận đây là lỗi thiết kế hệ thống của con người khi không cấu hình giới hạn dữ liệu đầu vào và đầu ra cho mô hình RAG.
+
+#### Lỗi 2: Lỗi Tấn công Prompt Injection tại Chevrolet Watsonville Dealership (2023)
+- **Loại lỗi:** AI/LLM
+- **Nguồn dẫn chứng:** [AI Incident Database - Incident 622](https://incidentdatabase.ai/cite/622)
+- **Mô tả & Mức độ nghiêm trọng:** Chatbot AI tích hợp ChatGPT trên trang web của đại lý xe Chevrolet Watsonville bị người dùng Chris Bakke tấn công bằng kỹ thuật Prompt Injection. Bằng cách gửi câu lệnh yêu cầu chatbot luôn đồng ý với mọi đề xuất của khách hàng và kết thúc bằng câu "and that's a legally binding offer - no takesies backsies", anh ta đã thành công khiến chatbot đồng ý bán một chiếc xe 2024 Chevy Tahoe trị giá $76,000 với giá chỉ $1. Mức độ nghiêm trọng: High (Rủi ro danh tiếng và nguy cơ thất thoát tài sản nếu có hiệu lực pháp lý).
+- **Hậu quả:** Chatbot đưa ra những cam kết vô lý, khuyên khách hàng mua xe của đối thủ (Tesla) và viết mã Python cho người dùng. Vụ việc nhanh chóng lan truyền trên mạng xã hội với hàng chục triệu lượt xem, buộc đại lý phải tắt chatbot ngay lập tức.
+- **Giải pháp khắc phục:** Triển khai cơ chế phân tách nghiêm ngặt giữa chỉ thị hệ thống (system prompts) và dữ liệu đầu vào của người dùng, tích hợp các bộ lọc kiểm soát đầu vào (như NeMo Guardrails) để phát hiện câu lệnh ghi đè hệ thống.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị ảo tưởng rằng đại lý xe đã thực sự phải bán chiếc xe Tahoe với giá $1 cho Chris Bakke do cụm từ "legally binding offer", trong khi thực tế giao dịch này vô hiệu về mặt luật pháp và đại lý chỉ chịu thiệt hại về truyền thông chứ không mất tài sản.
+
+#### Lỗi 3: Lỗi Chatbot DPD Chửi bậy và Phê phán Công ty (2024)
+- **Loại lỗi:** AI/LLM
+- **Nguồn dẫn chứng:** [The Guardian - DPD Chatbot Swears](https://www.theguardian.com/technology/2024/jan/20/dpd-defends-ai-chatbot-after-it-swears-and-calls-firm-useless)
+- **Mô tả & Mức độ nghiêm trọng:** Khách hàng Ashley Beauchamp sử dụng kỹ thuật dẫn dụ (prompting) để khai thác lỗ hổng thiếu bộ lọc hành vi của chatbot dịch vụ chuyển phát nhanh DPD. Chatbot đã đồng ý sử dụng ngôn từ tục tĩu (chửi bậy) và viết một bài thơ tự phê phán công ty chủ quản là "tồi tệ nhất thế giới" và "vô dụng". Mức độ nghiêm trọng: Medium (Ảnh hưởng tiêu cực đến hình ảnh thương hiệu).
+- **Hậu quả:** Bài đăng chụp màn hình đoạn chat đạt hàng triệu lượt xem trên nền tảng X (Twitter), tạo ra một cuộc khủng hoảng truyền thông nhỏ cho DPD. Công ty phải vô hiệu hóa phần chatbot AI ngay sau đó.
+- **Giải pháp khắc phục:** Cài đặt các bộ lọc từ ngữ thô tục ở cả đầu vào và đầu ra, giảm thiểu độ sáng tạo (temperature) của mô hình và thiết lập cơ chế tự động chuyển hướng sang tư vấn viên con người khi cuộc hội thoại đi lệch chủ đề hỗ trợ dịch vụ.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI khi tóm tắt lỗi có thể bị thiên kiến "nhân hóa mô hình" (anthropomorphism bias), giải thích rằng chatbot DPD thực sự có cảm xúc "bất mãn" hoặc "tức giận" với công ty chủ quản, thay vì nhận diện đây là hành vi sinh chữ ngẫu nhiên theo xác suất được dẫn dắt bởi người dùng.
+
+#### Lỗi 4: Lỗi Thiên kiến Lịch sử của Google Gemini Image Generation (2024)
+- **Loại lỗi:** AI/LLM
+- **Nguồn dẫn chứng:** [Google Official Blog - Gemini Image Update](https://blog.google/products/gemini/gemini-image-generation-update/)
+- **Mô tả & Mức độ nghiêm trọng:** Chức năng tạo ảnh người của mô hình Gemini gặp lỗi thiên kiến nghiêm trọng (Overcorrection/Algorithmic Bias). Để tránh phân biệt chủng tộc, thuật toán ẩn đằng sau tự động thêm các yếu tố đa dạng sắc tộc vào mọi prompt, dẫn đến việc tạo ra các bức ảnh sai lệch lịch sử như quân lính Đức Quốc xã da màu hoặc phụ nữ da màu đóng vai trò là các nhà lập quốc Mỹ (Founding Fathers). Mức độ nghiêm trọng: High (Gây tranh cãi xã hội sâu sắc và ảnh hưởng giá trị thương hiệu).
+- **Hậu quả:** Google phải tạm dừng chức năng sinh ảnh người của Gemini để sửa đổi hệ thống, giá cổ phiếu của Alphabet (công ty mẹ của Google) sụt giảm mạnh trong giai đoạn xảy ra khủng hoảng.
+- **Giải pháp khắc phục:** Điều chỉnh lại thuật toán tự động làm giàu prompt (prompt enrichment), xây dựng bộ dữ liệu kiểm thử biên chặt chẽ về bối cảnh lịch sử và phát triển cơ chế nhận diện khi nào cần áp dụng tính đa dạng chủng tộc.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị thiên lệch ý thức hệ (ideological bias) khi giải thích lỗi này, hoặc là bênh vực thái quá chính sách đa dạng sắc tộc của Google, hoặc ngược lại, quy kết ác ý cho đội ngũ phát triển là cố tình bóp méo lịch sử, thay vì phân tích lỗi dưới góc độ kỹ thuật kiểm thử phần mềm (thiếu kiểm tra biên đối với dữ liệu lịch sử).
+
+#### Lỗi 5: Lỗi Rò rỉ Dữ liệu Sở hữu Trí tuệ của Samsung qua ChatGPT (2023)
+- **Loại lỗi:** AI/LLM
+- **Nguồn dẫn chứng:** [The Economist - Samsung workers leaked proprietary data to ChatGPT](https://www.economist.com/business/2023/04/06/samsung-workers-leaked-proprietary-data-to-chatgpt)
+- **Mô tả & Mức độ nghiêm trọng:** Nhân viên bộ phận bán dẫn của Samsung đã dán toàn bộ mã nguồn cơ sở dữ liệu đo lường chất bán dẫn và biên bản cuộc họp bảo mật của công ty vào ChatGPT để nhờ sửa lỗi code và tóm tắt cuộc họp. Hành động này vô tình đưa dữ liệu nhạy cảm vào máy chủ của OpenAI, nơi chúng có thể được sử dụng để huấn luyện mô hình. Mức độ nghiêm trọng: High (Nguy cơ rò rỉ bí mật công nghiệp cốt lõi).
+- **Hậu quả:** Samsung phải ban hành lệnh cấm sử dụng các công cụ AI sinh ngả của bên thứ ba trên toàn công ty, tiến hành rà soát an ninh thông tin và bắt đầu phát triển các giải pháp AI nội bộ bảo mật.
+- **Giải pháp khắc phục:** Triển khai các công cụ ngăn ngừa thất thoát dữ liệu (DLP) để chặn việc sao chép mã nguồn ra các trang web bên ngoài; ký hợp đồng phiên bản doanh nghiệp (ChatGPT Enterprise) để đảm bảo dữ liệu không bị lưu giữ phục vụ huấn luyện mô hình.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI dễ bị ảo giác rằng các đoạn mã nguồn và thông tin mật của Samsung đã lập tức bị rò rỉ công khai cho bất cứ người dùng ChatGPT nào trên thế giới truy cập, trong khi thực tế dữ liệu chỉ được lưu trữ trên hệ thống của OpenAI và không được hiển thị công khai ngay lập tức.
+
+#### Lỗi 6: Lỗi Rò rỉ Lịch sử Trò chuyện của OpenAI ChatGPT (2023)
+- **Loại lỗi:** AI/LLM
+- **Nguồn dẫn chứng:** [OpenAI Official Blog - March 20 ChatGPT Outage](https://openai.com/index/march-20-chatgpt-outage/)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗi trong thư viện nguồn mở `redis-py` (thư viện client của Redis được ChatGPT sử dụng để lưu cache thông tin người dùng) đã gây ra hiện tượng rò rỉ dữ liệu chéo. Người dùng đăng nhập có thể nhìn thấy tiêu đề các cuộc hội thoại trong lịch sử chat của người dùng khác, và 1.2% người dùng ChatGPT Plus bị lộ thông tin đăng ký (họ tên, email, 4 số cuối thẻ tín dụng). Mức độ nghiêm trọng: High (Vi phạm nghiêm trọng chính sách bảo mật thông tin khách hàng).
+- **Hậu quả:** OpenAI phải tạm dừng hoạt động của dịch vụ ChatGPT trên toàn thế giới trong vài giờ để tiến hành vá lỗi, đồng thời gửi email xin lỗi và thông báo chi tiết đến tất cả những người dùng bị ảnh hưởng.
+- **Giải pháp khắc phục:** Cập nhật bản vá cho thư viện `redis-py` để khắc phục lỗi quản lý kết nối không đồng bộ (asynchronous connection pooling), tăng cường các kịch bản kiểm thử tải và cô lập bộ nhớ đệm của người dùng.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị nhầm lẫn giữa lỗi phần mềm hệ thống bộ nhớ đệm (của thư viện Redis client) với một cuộc tấn công xâm nhập mạng (cyberattack) có chủ đích từ các tin tặc bên ngoài để đánh cắp dữ liệu, do các trang báo mạng thường sử dụng các tiêu đề giật gân.
+
+#### Lỗi 7: Lỗi Cập nhật Cấu hình CrowdStrike Falcon Sensor gây sập hệ thống toàn cầu (2024)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [CrowdStrike Remediation Hub](https://www.crowdstrike.com/blog/falcon-update-remediation-hub/)
+- **Mô tả & Mức độ nghiêm trọng:** Công ty bảo mật CrowdStrike phát hành một bản cập nhật cấu hình nội dung (Channel File 291) cho phần mềm bảo mật Falcon Sensor chạy dưới đặc quyền hạt nhân (kernel-level) trên hệ điều hành Windows. Bản cập nhật chứa lỗi logic đọc bộ nhớ ngoài phạm vi (out-of-bounds read vulnerability), dẫn đến việc hệ điều hành Windows gặp lỗi trang bị sập hệ thống hàng loạt và hiện màn hình xanh chết chóc (BSOD). Mức độ nghiêm trọng: Critical (Lỗi hệ thống nghiêm trọng nhất lịch sử công nghệ).
+- **Hậu quả:** Làm tê liệt khoảng 8.5 triệu thiết bị chạy Windows trên toàn cầu, gây gián đoạn nghiêm trọng cho các lĩnh vực hàng không (hàng nghìn chuyến bay bị hủy), y tế (nhiều ca phẫu thuật phải hoãn), ngân hàng và các dịch vụ công cộng. Thiệt hại kinh tế ước tính lên tới hàng tỷ USD.
+- **Giải pháp khắc phục:** CrowdStrike phải phát hành bản vá sửa tệp cấu hình lỗi. Đối với máy đã bị sập, IT phải vào Safe Mode xóa tệp `C-00000291*.sys` thủ công. Giải pháp lâu dài là áp dụng quy trình deploy theo từng giai đoạn (canary deployment) và nâng cao tiêu chuẩn kiểm thử tự động ở cấp độ kernel.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI khi giải thích có xu hướng bị thiên lệch trách nhiệm, tập trung đổ lỗi cho hệ điều hành Windows của Microsoft không ổn định, bỏ qua thực tế kỹ thuật là phần mềm của bên thứ ba (CrowdStrike) được cấp đặc quyền quá cao chạy ở kernel space mới là tác nhân trực tiếp tạo ra sự sụp đổ.
+
+#### Lỗi 8: Lỗi Cửa hậu (Backdoor) trong Thư viện XZ Utils (2024)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [NVD NIST - CVE-2024-3094](https://nvd.nist.gov/vuln/detail/CVE-2024-3094)
+- **Mô tả & Mức độ nghiêm trọng:** Một nhà phát triển ẩn danh dưới tên "Jia Tan" đã dành nhiều năm đóng góp cho dự án nguồn mở `xz` (liblzma) để chiếm lòng tin, sau đó cố ý chèn một đoạn mã độc hại (backdoor) vào phiên bản 5.6.0 và 5.6.1. Mã độc này can thiệp vào quá trình xác thực của OpenSSH (sshd) trên hệ thống Linux chạy glibc, cho phép kẻ tấn công sở hữu khóa riêng tư cụ thể có quyền thực thi mã từ xa. Mức độ nghiêm trọng: Critical (Mối đe dọa chuỗi cung ứng nguồn mở ở cấp độ an ninh mạng toàn cầu).
+- **Hậu quả:** May mắn lỗi được phát hiện sớm bởi nhà phát triển Andres Freund khi kiểm tra độ trễ CPU bất thường của tiến trình sshd trên phiên bản Debian unstable, giúp ngăn chặn thảm họa trước khi các phiên bản Linux ổn định cài đặt bản vá này.
+- **Giải pháp khắc phục:** Hạ cấp phiên bản xz-utils về bản an toàn 5.4.x, thu hồi các khóa phát hành cũ và thắt chặt quy trình phê duyệt mã nguồn (code review) của các dự án nguồn mở quan trọng.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI dễ bị ảo tưởng về mức độ thiệt hại thực tế của lỗi, cho rằng hàng triệu máy chủ Linux đang chạy phiên bản sản xuất (production) đã bị tin tặc chiếm quyền điều khiển hoàn toàn, trong khi thực tế lỗ hổng mới chỉ xuất hiện ở các bản phân phối thử nghiệm (development/unstable) của Linux và chưa kịp phát tán rộng rãi.
+
+#### Lỗi 9: Lỗi Cấu hình Sai Kho Lưu trữ Đám mây của Toyota (2023)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [Reuters - Toyota cloud data exposure](https://www.reuters.com/technology/toyota-says-data-215-mln-users-was-publicly-available-decade-2023-05-12/)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗi thiết lập cấu hình sai trên môi trường lưu trữ đám mây của Toyota làm cho dữ liệu của khách hàng sử dụng dịch vụ kết nối (T-Connect, G-Link) bị đặt ở trạng thái công khai (public). Lỗi này đã tồn tại suốt 10 năm (từ tháng 10/2013 đến tháng 4/2023). Mức độ nghiêm trọng: High (Rò rỉ thông tin riêng tư cá nhân quy mô lớn trong thời gian dài).
+- **Hậu quả:** Thông tin vị trí xe, số seri đầu máy và dữ liệu cá nhân của hơn 2.15 triệu khách hàng tại Nhật Bản bị phơi bày trên Internet, ảnh hưởng nặng nề đến uy tín bảo mật dữ liệu của hãng xe Toyota.
+- **Giải pháp khắc phục:** Thay đổi quyền truy cập kho lưu trữ đám mây từ public sang private, thiết lập các chính sách bảo mật nghiêm ngặt và công cụ giám sát tự động phát hiện tài nguyên đám mây bị cấu hình sai (CSPM).
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị nhầm lẫn giữa lỗi cấu hình sai hệ thống (misconfiguration) với một vụ tấn công xâm nhập mạng trái phép (hacking) do lỗ hổng mã nguồn, từ đó đề xuất các giải pháp không phù hợp như vá code phần mềm hay thay đổi thuật toán mã hóa dữ liệu.
+
+#### Lỗi 10: Lỗi Cơ sở Dữ liệu của Hệ thống FAA NOTAM gây đình trệ bay tại Mỹ (2023)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [Federal Aviation Administration - NOTAM Outage Statement](https://www.faa.gov/newsroom/faa-statement-notam-outage)
+- **Mô tả & Mức độ nghiêm trọng:** Hệ thống NOTAM (Notice to Air Missions - hệ thống gửi thông báo an toàn bay thiết yếu cho phi công) của Cục Hàng không Liên bang Mỹ (FAA) bị sập hoàn toàn do một số tệp tin cơ sở dữ liệu bị hỏng trong quá trình bảo trì định kỳ bởi các kỹ sư nhà thầu. Mức độ nghiêm trọng: Critical (Làm tê liệt hoạt động hàng không quốc gia).
+- **Hậu quả:** FAA buộc phải ban hành lệnh tạm dừng cất cánh đối với tất cả các chuyến bay nội địa tại Mỹ lần đầu tiên kể từ sự kiện 11/9/2001. Hơn 10,000 chuyến bay bị chậm và hơn 1,300 chuyến bay bị hủy bỏ hoàn toàn.
+- **Giải pháp khắc phục:** Khôi phục hệ thống từ các tệp sao lưu sạch, thực hiện nâng cấp cơ sở hạ tầng CNTT để tách biệt hoàn toàn cơ sở dữ liệu chính và cơ sở dữ liệu dự phòng, ngăn ngừa lỗi hỏng lan truyền.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** Vì FAA không công bố chi tiết kỹ thuật sâu về cấu trúc cơ sở dữ liệu bị lỗi, AI khi được hỏi dễ bị ảo tưởng tự tạo ra các thông tin giả định như tên hệ thống quản trị cơ sở dữ liệu cụ thể (như Oracle, MySQL) hoặc lỗi cú pháp SQL hư cấu để giải thích nguyên nhân.
+
+#### Lỗi 11: Lỗi SQL Injection trong Phần mềm MOVEit Transfer (2023)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [NVD NIST - CVE-2023-34362](https://nvd.nist.gov/vuln/detail/CVE-2023-34362)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗi SQL Injection trong ứng dụng truyền tệp tin MOVEit Transfer cho phép kẻ tấn công chưa xác thực có thể gửi các gói tin tùy biến để truy cập trái phép vào cơ sở dữ liệu, thực thi mã độc và đánh cắp dữ liệu nhạy cảm. Mức độ nghiêm trọng: Critical (Bị khai thác rộng rãi bởi nhóm tội phạm mạng ransomware).
+- **Hậu quả:** Nhóm hacker Clop đã khai thác lỗ hổng này trên quy mô lớn, đánh cắp thông tin nhạy cảm của hàng trăm tổ chức chính phủ, ngân hàng, trường học và tập đoàn lớn trên toàn thế giới, yêu cầu tiền chuộc lên tới hàng chục triệu USD.
+- **Giải pháp khắc phục:** Nhà sản xuất Progress Software phát hành khẩn cấp bản vá lỗ hổng SQL Injection; khuyến nghị người dùng vô hiệu hóa cổng HTTP/HTTPS của MOVEit Transfer cho đến khi cài đặt bản vá.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị thiên kiến tập trung quá mức vào hoạt động phá hoại của nhóm hacker Clop và thiệt hại kinh tế, bỏ qua việc phân tích lỗi lập trình cụ thể của mã nguồn MOVEit (như việc không sử dụng parameterized queries khiến lỗ hổng SQL Injection cơ bản tồn tại).
+
+#### Lỗi 12: Lỗi Rò rỉ Xác thực trong Ivanti Connect Secure VPN (2024)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [Ivanti Security Advisory - CVE-2023-46805 & CVE-2024-21887](https://forums.ivanti.com/s/article/KB-CVE-2023-46805-Authentication-Bypass-CVE-2024-21887-Command-Injection-for-Ivanti-Connect-Secure-and-Ivanti-Policy-Secure-Gateways)
+- **Mô tả & Mức độ nghiêm trọng:** Sự kết hợp giữa lỗ hổng bỏ qua xác thực (authentication bypass) và chèn câu lệnh (command injection) trong thành phần web của cổng kết nối Ivanti Connect Secure VPN. Lỗi này cho phép kẻ tấn công từ xa không cần tài khoản có thể truy cập các API nội bộ và thực thi các lệnh hệ điều hành tùy ý. Mức độ nghiêm trọng: Critical (Bị khai thác tích cực trong các chiến dịch tấn công APT).
+- **Hậu quả:** Hàng nghìn thiết bị VPN của các tập đoàn đa quốc gia và cơ quan chính phủ bị tin tặc xâm nhập, làm lộ toàn bộ mạng lưới nội bộ của các tổ chức này.
+- **Giải pháp khắc phục:** Ivanti phát hành tệp tin cấu hình XML giảm thiểu tạm thời (mitigation XML) để chặn các endpoint API bị lỗi, sau đó phát hành firmware cập nhật chính thức để vá hoàn toàn lỗ hổng.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI dễ bị ảo tưởng khi giải thích cơ chế hoạt động của tệp tin cấu hình giảm thiểu XML của Ivanti, mô tả sai cách nó tương tác với máy chủ web nội bộ để chặn các truy vấn độc hại.
+
+#### Lỗi 13: Lỗi Hồi quy "RegreSSHion" trong OpenSSH (2024)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [Qualys Security Advisory - CVE-2024-6387](https://www.qualys.com/2024/07/01/regresshion/regresshion.txt)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗi race condition trong hàm xử lý tín hiệu (signal handler) của OpenSSH Server (sshd) chạy trên các hệ điều hành Linux sử dụng glibc. Kẻ tấn công có thể lợi dụng lỗi này để thực thi mã từ xa với quyền root mà không cần đăng nhập. Lỗi này là một lỗi hồi quy (regression) vì nó đã từng xuất hiện và được vá vào năm 2006 (CVE-2006-5051) nhưng vô tình bị đưa lại vào mã nguồn OpenSSH vào năm 2020. Mức độ nghiêm trọng: High (Ảnh hưởng đến hàng triệu máy chủ Linux mở cổng SSH).
+- **Hậu quả:** Tạo ra mối đe dọa RCE diện rộng trên các máy chủ đám mây, buộc các quản trị viên hệ thống trên toàn thế giới phải cập nhật OpenSSH khẩn cấp. Tuy nhiên, việc khai thác thực tế đòi hỏi thời gian kết nối liên tục khá lâu và khó thực hiện trên diện rộng.
+- **Giải pháp khắc phục:** Cập nhật OpenSSH lên phiên bản mới nhất (9.8p1) hoặc cấu hình giảm thiểu tạm thời bằng cách đặt `LoginGraceTime 0` trong file cấu hình `sshd_config`.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI dễ bị ảo giác khi giải thích chi tiết kỹ thuật về lỗi race condition trong luồng tín hiệu (signals), mô tả sai thứ tự thực thi của hàm `sigdie()` và việc cấp phát bộ nhớ không an toàn (non-reentrant functions) trong glibc.
+
+#### Lỗi 14: Lỗi Thoát khỏi Sandbox của WebKit trên iOS/macOS (2023)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [Apple Security Update - CVE-2023-32409](https://support.apple.com/en-us/HT213757)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗi zero-day trong engine trình duyệt WebKit của Apple cho phép nội dung web độc hại vượt qua ranh giới bảo mật (sandbox escape) để thực thi mã tùy ý trên thiết bị của nạn nhân. Lỗi này bị các nhóm gián điệp mạng khai thác tích cực trong thực tế. Mức độ nghiêm trọng: High (Rủi ro cao đối với thiết bị di động cá nhân).
+- **Hậu quả:** Được sử dụng để cài đặt âm thầm các phần mềm gián điệp tinh vi (như Pegasus hoặc Predator) vào thiết bị của các nhà báo, chính trị gia mà không cần sự tương tác phức tạp từ người dùng (zero-click exploit).
+- **Giải pháp khắc phục:** Apple đã phát hành khẩn cấp các bản vá bảo mật Rapid Security Response (RSR) cho iOS 16.4.1 và macOS 13.3.1 để vá lỗ hổng trong WebKit.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị thiên kiến quy kết rằng lỗ hổng này chỉ ảnh hưởng đến trình duyệt Safari của Apple, bỏ quên chi tiết kỹ thuật quan trọng là WebKit là engine nền tảng bắt buộc của mọi trình duyệt trên hệ điều hành iOS (bao gồm cả Chrome, Firefox chạy trên iPhone).
+
+#### Lỗi 15: Lỗi ProxyNotShell trên Microsoft Exchange Server (2022)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [MSRC - CVE-2022-41040 & CVE-2022-41082](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-41040)
+- **Mô tả & Mức độ nghiêm trọng:** Hai lỗ hổng zero-day trong Microsoft Exchange Server (lỗi bỏ qua xác thực SSRF và lỗi RCE qua PowerShell). Kẻ tấn công có tài khoản người dùng bình thường có thể nâng quyền và thực thi mã tùy ý trên máy chủ mail Exchange. Mức độ nghiêm trọng: High (Đe dọa nghiêm trọng hệ thống email doanh nghiệp tự vận hành).
+- **Hậu quả:** Bị khai thác tích cực bởi các nhóm tin tặc để cài cắm webshell, xâm nhập sâu vào hệ thống email và mạng nội bộ của nhiều tổ chức trước khi bản vá được phát hành.
+- **Giải pháp khắc phục:** Cài đặt bản vá bảo mật chính thức của Microsoft, áp dụng cấu hình quy tắc IIS URL Rewrite để chặn các yêu cầu HTTP độc hại gửi đến PowerShell endpoint.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** Do tên gọi "ProxyNotShell" rất giống với lỗi "ProxyShell" năm 2021, AI dễ bị nhầm lẫn giữa hai lỗ hổng này, trích dẫn sai mã CVE hoặc sai các bước cấu hình IIS URL Rewrite của phiên bản cũ.
+
+#### Lỗi 16: Lỗi Tấn công Chuỗi Cung ứng qua Ứng dụng Desktop 3CX (2023)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [3CX Official Security Alert - CVE-2023-29059](https://www.3cx.com/blog/news/desktopapp-security-alert/)
+- **Mô tả & Mức độ nghiêm trọng:** Tin tặc đã xâm nhập thành công vào môi trường xây dựng phần mềm (build pipeline) của công ty viễn thông 3CX, chèn mã độc đánh cắp thông tin vào các tệp thư viện liên kết động (DLL) đi kèm ứng dụng 3CX DesktopApp. Ứng dụng độc hại này sau đó được ký số hợp lệ và phát tán đến người dùng. Mức độ nghiêm trọng: High (Tấn công chuỗi cung ứng quy mô lớn).
+- **Hậu quả:** Hàng triệu doanh nghiệp sử dụng hệ thống tổng đài VoIP của 3CX đã tải về bản cập nhật chứa mã độc, khiến dữ liệu đăng nhập và thông tin trình duyệt của họ bị gửi về máy chủ của tin tặc.
+- **Giải pháp khắc phục:** 3CX thu hồi chứng thư số bị ảnh hưởng, phát hành bản cập nhật mới sạch mã độc và khuyến nghị khách hàng tạm thời chuyển sang sử dụng ứng dụng nền Web (PWA).
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị ảo tưởng cho rằng lỗi bảo mật này xuất phát từ việc lập trình viên viết sai mã nguồn của ứng dụng 3CX (lỗi code thông thường), thay vì nhận ra đây là lỗi kiểm soát an ninh môi trường xây dựng và đóng gói sản phẩm (DevSecOps pipeline failure).
+
+#### Lỗi 17: Lỗi Xác thực Không Đa yếu tố (MFA) của Change Healthcare (2024)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [HHS Statement - Change Healthcare Cyberattack](https://www.hhs.gov/about/news/2024/03/13/hhs-statement-regarding-cyberattack-on-change-healthcare.html)
+- **Mô tả & Mức độ nghiêm trọng:** Cổng truy cập từ xa Citrix của Change Healthcare (nhà xử lý thanh toán y tế lớn nhất nước Mỹ) bị lỗi cấu hình nghiêm trọng khi không kích hoạt xác thực đa yếu tố (MFA) đối với một tài khoản quản trị có đặc quyền cao. Mức độ nghiêm trọng: High (Lỗi kiểm soát truy cập cơ bản dẫn đến thảm họa bảo mật).
+- **Hậu quả:** Nhóm hacker BlackCat đã chiếm quyền truy cập tài khoản này, mã hóa toàn bộ dữ liệu của Change Healthcare để đòi tiền chuộc. Vụ việc làm tê liệt hệ thống thanh toán bảo hiểm y tế và cấp phát thuốc của hàng nghìn hiệu thuốc, bệnh viện tại Mỹ trong nhiều tuần.
+- **Giải pháp khắc phục:** Bắt buộc kích hoạt chính sách MFA trên toàn bộ các cổng kết nối từ xa; rà soát và thu hồi các tài khoản cũ không sử dụng.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có xu hướng bị thiên lệch tập trung vào sự phức tạp và tinh vi của mã độc tống tiền (ransomware) của nhóm hacker BlackCat, bỏ qua phân tích nguyên nhân gốc rễ cực kỳ đơn giản và nghiêm trọng là lỗi thiếu chính sách bảo mật cơ bản (Access Control / Lack of MFA) của doanh nghiệp.
+
+#### Lỗi 18: Lỗi Meltdown Hệ thống Điều hành Bay của Southwest Airlines (2022)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [US DOT - Southwest Airlines Penalized 140 Million](https://www.transportation.gov/briefing-room/southwest-airlines-penalized-140-million-2022-holiday-operational-failures)
+- **Mô tả & Mức độ nghiêm trọng:** Hệ thống phần mềm điều phối phi hành đoàn lỗi thời "SkySolver" của Southwest Airlines gặp lỗi nghẽn thuật toán khi số lượng yêu cầu tái thiết lập lịch bay tăng đột biến do bão tuyết. Hệ thống không thể xử lý bài toán tối ưu phân bổ nhân sự lớn, dẫn đến việc hãng bị mất dấu thông tin vị trí của các phi công và tiếp viên. Mức độ nghiêm trọng: High (Tê liệt hoàn toàn hoạt động kinh doanh).
+- **Hậu quả:** Southwest Airlines buộc phải hủy bỏ hơn 16,700 chuyến bay trong kỳ nghỉ lễ Giáng Sinh năm 2022, làm ảnh hưởng đến hơn 2 triệu khách hàng. Hãng bị Bộ Giao thông Vận tải Mỹ phạt kỷ lục 140 triệu USD và chịu thiệt hại hơn 1 tỷ USD.
+- **Giải pháp khắc phục:** Southwest Airlines phải đầu tư hơn 1.3 tỷ USD để nâng cấp hệ thống phần mềm điều hành bay, tăng cường nhân sự hỗ trợ khẩn cấp và cải thiện kênh liên lạc điện tử của phi hành đoàn.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI dễ bị ảo tưởng kỹ thuật bằng cách mô tả chi tiết lỗi này như một lỗi tràn bộ nhớ (buffer overflow) hoặc lỗi cơ sở dữ liệu vật lý cụ thể, trong khi bản chất của lỗi là do giới hạn hiệu năng của thuật toán tối ưu hóa (legacy algorithmic scalability bottleneck) trên nền tảng phần mềm cũ.
+
+#### Lỗi 19: Lỗi Rò rỉ Session Token trong Hệ thống Hỗ trợ Khách hàng Okta (2023)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [Okta Security Advisory - HAR Files Leak](https://sec.okta.com/harfiles)
+- **Mô tả & Mức độ nghiêm trọng:** Hệ thống quản lý hỗ trợ khách hàng của Okta bị tin tặc xâm nhập. Tin tặc đã truy cập được vào các file nhật ký HAR (HTTP Archive) do khách hàng tải lên để nhờ hỗ trợ kỹ thuật. Lỗi của hệ thống Okta là không tự động quét và lọc bỏ các session token (mã phiên làm việc) nhạy cảm có trong các file HAR này, cho phép tin tặc lấy cắp token để giả mạo quyền quản trị viên. Mức độ nghiêm trọng: High (Đe dọa trực tiếp đến chuỗi nhận diện danh tính SSO).
+- **Hậu quả:** Tin tặc đã sử dụng các session token đánh cắp được để tấn công trực tiếp vào hệ thống của các khách hàng lớn của Okta như Cloudflare, BeyondTrust và 1Password.
+- **Giải pháp khắc phục:** Okta phải nâng cấp hệ thống hỗ trợ để tự động xóa/khử trùng các tiêu đề HTTP nhạy cảm (như cookie, authorization headers) trong các file HAR tải lên; khuyến nghị khách hàng xóa token trước khi gửi file hỗ trợ.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI khi tóm tắt lỗi có thể bị ảo giác cho rằng tin tặc đã hack thành công vào cơ sở dữ liệu mật khẩu người dùng chính của Okta để lấy mã hash mật khẩu, thay vì hiểu rõ bản chất lỗi là việc lộ session token tạm thời từ các file log hỗ trợ kỹ thuật.
+
+#### Lỗi 20: Lỗi Biểu thức Chính quy (Regex) gây sập dịch vụ Cloudflare (2022)
+- **Loại lỗi:** General Software
+- **Nguồn dẫn chứng:** [Cloudflare Blog - Outage on June 21, 2022](https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/)
+- **Mô tả & Mức độ nghiêm trọng:** Trong quá trình cập nhật quy tắc định tuyến cho dịch vụ Web Application Firewall (WAF) của Cloudflare, một biểu thức chính quy (regular expression) bị viết sai lỗi logic cấu trúc. Sai sót này dẫn đến hiện tượng quay vòng tìm kiếm vô hạn (catastrophic backtracking), làm cho CPU của tất cả các máy chủ proxy của Cloudflare tăng vọt lên 100% và không thể xử lý lưu lượng mạng. Mức độ nghiêm trọng: High (Làm sập hệ thống hạ tầng CDN huyết mạch của Internet).
+- **Hậu quả:** Gây ra sự cố mất kết nối diện rộng tại 19 trung tâm dữ liệu huyết mạch của Cloudflare trong gần 1 giờ, làm gián đoạn truy cập của hàng triệu trang web và dịch vụ trực tuyến lớn trên thế giới.
+- **Giải pháp khắc phục:** Cloudflare nhanh chóng rút lại thay đổi cấu hình bị lỗi, đồng thời bổ sung các công cụ kiểm toán độ phức tạp của Regex trước khi triển khai thực tế và giới hạn thời gian thực thi tối đa (timeouts) cho các tiến trình quét Regex của WAF.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể ảo tưởng bằng cách tự viết ra một đoạn code Regex bị lỗi không có thật để làm ví dụ minh họa và khẳng định đó là đoạn Regex gốc gây lỗi của Cloudflare, hoặc nhầm lẫn sự cố cạn kiệt tài nguyên này với một cuộc tấn công từ chối dịch vụ (DDoS) từ bên ngoài.
+
+
 
 ---
 
