@@ -841,45 +841,45 @@ Hồ Tuấn Thanh
 - **Giải pháp khắc phục:** Cài đặt bản vá bảo mật chính thức của Microsoft, áp dụng cấu hình quy tắc IIS URL Rewrite để chặn các yêu cầu HTTP độc hại gửi đến PowerShell endpoint.
 - **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** Do tên gọi "ProxyNotShell" rất giống với lỗi "ProxyShell" năm 2021, AI dễ bị nhầm lẫn giữa hai lỗ hổng này, trích dẫn sai mã CVE hoặc sai các bước cấu hình IIS URL Rewrite của phiên bản cũ.
 
-#### Lỗi 16: Lỗi Tấn công Chuỗi Cung ứng qua Ứng dụng Desktop 3CX (2023)
+#### Lỗi 16: Lỗi Chiếm đoạt Tài khoản GitLab (CVE-2023-7028) (2024)
 - **Loại lỗi:** General Software
-- **Nguồn dẫn chứng:** [3CX Official Security Alert - CVE-2023-29059](https://www.3cx.com/blog/news/desktopapp-security-alert/)
-- **Mô tả & Mức độ nghiêm trọng:** Tin tặc đã xâm nhập thành công vào môi trường xây dựng phần mềm (build pipeline) của công ty viễn thông 3CX, chèn mã độc đánh cắp thông tin vào các tệp thư viện liên kết động (DLL) đi kèm ứng dụng 3CX DesktopApp. Ứng dụng độc hại này sau đó được ký số hợp lệ và phát tán đến người dùng. Mức độ nghiêm trọng: High (Tấn công chuỗi cung ứng quy mô lớn).
-- **Hậu quả:** Hàng triệu doanh nghiệp sử dụng hệ thống tổng đài VoIP của 3CX đã tải về bản cập nhật chứa mã độc, khiến dữ liệu đăng nhập và thông tin trình duyệt của họ bị gửi về máy chủ của tin tặc.
-- **Giải pháp khắc phục:** 3CX thu hồi chứng thư số bị ảnh hưởng, phát hành bản cập nhật mới sạch mã độc và khuyến nghị khách hàng tạm thời chuyển sang sử dụng ứng dụng nền Web (PWA).
-- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị ảo tưởng cho rằng lỗi bảo mật này xuất phát từ việc lập trình viên viết sai mã nguồn của ứng dụng 3CX (lỗi code thông thường), thay vì nhận ra đây là lỗi kiểm soát an ninh môi trường xây dựng và đóng gói sản phẩm (DevSecOps pipeline failure).
+- **Nguồn dẫn chứng:** [NVD NIST - CVE-2023-7028](https://nvd.nist.gov/vuln/detail/CVE-2023-7028)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗ hổng kiểm soát truy cập không an toàn (Improper Access Control) trong cơ chế khôi phục mật khẩu của GitLab CE/EE. Lỗi logic này cho phép một người dùng chưa xác thực gửi yêu cầu khôi phục mật khẩu tài khoản bất kỳ tới một email do họ tự chọn mà không cần thông qua sự đồng ý của nạn nhân. Mức độ nghiêm trọng: Critical (CVSS 10.0).
+- **Hậu quả:** Kẻ tấn công dễ dàng chiếm quyền kiểm soát các tài khoản lập trình viên và quản trị viên của các máy chủ GitLab tự vận hành, tiếp cận mã nguồn bảo mật của doanh nghiệp và thực hiện các cuộc tấn công chuỗi cung ứng phần mềm.
+- **Giải pháp khắc phục:** Cập nhật GitLab lên các phiên bản vá lỗi (ví dụ: 16.7.2, 16.6.4, 16.5.6 trở lên) và bắt buộc kích hoạt xác thực hai yếu tố (2FA) cho toàn bộ người dùng.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có xu hướng bị ảo tưởng quy lỗi này cho việc rò rỉ cơ sở dữ liệu mật khẩu hoặc tấn công Session Hijacking thông thường, thay vì nhận diện đúng đây là lỗi logic thiết kế (logic flow flaw) trong quy trình xác thực email nhận mã khôi phục mật khẩu.
 
-#### Lỗi 17: Lỗi Xác thực Không Đa yếu tố (MFA) của Change Healthcare (2024)
+#### Lỗi 17: Lỗi Thực thi Mã từ xa khi xử lý tệp ZIP trong WinRAR (CVE-2023-38831) (2023)
 - **Loại lỗi:** General Software
-- **Nguồn dẫn chứng:** [HHS Statement - Change Healthcare Cyberattack](https://www.hhs.gov/about/news/2024/03/13/hhs-statement-regarding-cyberattack-on-change-healthcare.html)
-- **Mô tả & Mức độ nghiêm trọng:** Cổng truy cập từ xa Citrix của Change Healthcare (nhà xử lý thanh toán y tế lớn nhất nước Mỹ) bị lỗi cấu hình nghiêm trọng khi không kích hoạt xác thực đa yếu tố (MFA) đối với một tài khoản quản trị có đặc quyền cao. Mức độ nghiêm trọng: High (Lỗi kiểm soát truy cập cơ bản dẫn đến thảm họa bảo mật).
-- **Hậu quả:** Nhóm hacker BlackCat đã chiếm quyền truy cập tài khoản này, mã hóa toàn bộ dữ liệu của Change Healthcare để đòi tiền chuộc. Vụ việc làm tê liệt hệ thống thanh toán bảo hiểm y tế và cấp phát thuốc của hàng nghìn hiệu thuốc, bệnh viện tại Mỹ trong nhiều tuần.
-- **Giải pháp khắc phục:** Bắt buộc kích hoạt chính sách MFA trên toàn bộ các cổng kết nối từ xa; rà soát và thu hồi các tài khoản cũ không sử dụng.
-- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có xu hướng bị thiên lệch tập trung vào sự phức tạp và tinh vi của mã độc tống tiền (ransomware) của nhóm hacker BlackCat, bỏ qua phân tích nguyên nhân gốc rễ cực kỳ đơn giản và nghiêm trọng là lỗi thiếu chính sách bảo mật cơ bản (Access Control / Lack of MFA) của doanh nghiệp.
+- **Nguồn dẫn chứng:** [NVD NIST - CVE-2023-38831](https://nvd.nist.gov/vuln/detail/CVE-2023-38831)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗ hổng xử lý định dạng tệp nén trong WinRAR khi thực hiện giải nén và mở tệp. WinRAR phiên bản trước 6.23 gặp lỗi logic so khớp đường dẫn, cho phép kẻ tấn công tạo tệp nén ZIP chứa tệp tin vô hại kèm thư mục cùng tên chứa mã thực thi độc hại. Khi người dùng mở tệp tin vô hại, hệ thống sẽ thực thi nhầm mã độc hại. Mức độ nghiêm trọng: High (CVSS 7.8, bị khai thác zero-day trong thực tế).
+- **Hậu quả:** Kẻ tấn công tận dụng lỗi này để gửi email chứa tệp đính kèm ZIP độc hại giả dạng tài liệu để lây nhiễm trojan và mã độc tống tiền vào máy tính của nạn nhân (đặc biệt là các tổ chức tài chính).
+- **Giải pháp khắc phục:** Nâng cấp phần mềm WinRAR lên phiên bản 6.23 hoặc mới hơn để vá hoàn toàn lỗi logic so khớp đường dẫn giải nén.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI thường thiên lệch khi mô tả lỗi này như một lỗi tràn bộ nhớ (buffer overflow) thông thường trong việc đọc định dạng nén ZIP, bỏ qua nguyên nhân cốt lõi là lỗi logic cấu trúc đường dẫn (path matching logic flaw) trong mã nguồn xử lý sự kiện click đúp tệp.
 
-#### Lỗi 18: Lỗi Meltdown Hệ thống Điều hành Bay của Southwest Airlines (2022)
+#### Lỗi 18: Lỗi Rò rỉ Thông tin Xác thực NTLM tự động trên Microsoft Outlook (CVE-2023-23397) (2023)
 - **Loại lỗi:** General Software
-- **Nguồn dẫn chứng:** [US DOT - Southwest Airlines Penalized 140 Million](https://www.transportation.gov/briefing-room/southwest-airlines-penalized-140-million-2022-holiday-operational-failures)
-- **Mô tả & Mức độ nghiêm trọng:** Hệ thống phần mềm điều phối phi hành đoàn lỗi thời "SkySolver" của Southwest Airlines gặp lỗi nghẽn thuật toán khi số lượng yêu cầu tái thiết lập lịch bay tăng đột biến do bão tuyết. Hệ thống không thể xử lý bài toán tối ưu phân bổ nhân sự lớn, dẫn đến việc hãng bị mất dấu thông tin vị trí của các phi công và tiếp viên. Mức độ nghiêm trọng: High (Tê liệt hoàn toàn hoạt động kinh doanh).
-- **Hậu quả:** Southwest Airlines buộc phải hủy bỏ hơn 16,700 chuyến bay trong kỳ nghỉ lễ Giáng Sinh năm 2022, làm ảnh hưởng đến hơn 2 triệu khách hàng. Hãng bị Bộ Giao thông Vận tải Mỹ phạt kỷ lục 140 triệu USD và chịu thiệt hại hơn 1 tỷ USD.
-- **Giải pháp khắc phục:** Southwest Airlines phải đầu tư hơn 1.3 tỷ USD để nâng cấp hệ thống phần mềm điều hành bay, tăng cường nhân sự hỗ trợ khẩn cấp và cải thiện kênh liên lạc điện tử của phi hành đoàn.
-- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI dễ bị ảo tưởng kỹ thuật bằng cách mô tả chi tiết lỗi này như một lỗi tràn bộ nhớ (buffer overflow) hoặc lỗi cơ sở dữ liệu vật lý cụ thể, trong khi bản chất của lỗi là do giới hạn hiệu năng của thuật toán tối ưu hóa (legacy algorithmic scalability bottleneck) trên nền tảng phần mềm cũ.
+- **Nguồn dẫn chứng:** [NVD NIST - CVE-2023-23397](https://nvd.nist.gov/vuln/detail/CVE-2023-23397)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗ hổng nâng đặc quyền (Elevation of Privilege) trong Microsoft Outlook. Sự cố phát sinh do cơ chế xử lý không an toàn của thuộc tính MAPI `PidLidReminderFileParameter` chứa đường dẫn UNC trỏ ra máy chủ SMB bên ngoài. Lỗ hổng kích hoạt tự động (zero-interaction) khi Outlook nhận và xử lý email trước khi người dùng mở email đó. Mức độ nghiêm trọng: Critical (CVSS 9.8).
+- **Hậu quả:** Ngay khi email chứa payload được tải về máy khách Outlook, thiết bị của nạn nhân sẽ tự động gửi gói tin xác thực chứa mã băm mật khẩu NTLMv2 tới máy chủ của kẻ tấn công, giúp chúng lấy được thông tin xác thực để truy cập trái phép vào tài khoản của người dùng.
+- **Giải pháp khắc phục:** Cài đặt các bản vá khẩn cấp của Microsoft phát hành tháng 3/2023 và cấu hình chặn lưu lượng SMB (cổng 445) đi ra Internet công cộng từ mạng doanh nghiệp.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI dễ bị ảo giác cho rằng đây là lỗi thực thi mã tùy ý (RCE) trực tiếp trên máy chủ Exchange hoặc thông qua lỗi bộ nhớ trong Outlook, thay vì hiểu đúng đây là lỗi rò rỉ và chuyển tiếp hàm băm xác thực NTLM (NTLM Relay/credential leak) do cơ chế tự động xử lý đường dẫn âm thanh nhắc nhở.
 
-#### Lỗi 19: Lỗi Rò rỉ Session Token trong Hệ thống Hỗ trợ Khách hàng Okta (2023)
+#### Lỗi 19: Lỗi Tràn Bộ đệm trên Cổng VPN của Fortinet FortiOS (CVE-2024-21762) (2024)
 - **Loại lỗi:** General Software
-- **Nguồn dẫn chứng:** [Okta Security Advisory - HAR Files Leak](https://sec.okta.com/harfiles)
-- **Mô tả & Mức độ nghiêm trọng:** Hệ thống quản lý hỗ trợ khách hàng của Okta bị tin tặc xâm nhập. Tin tặc đã truy cập được vào các file nhật ký HAR (HTTP Archive) do khách hàng tải lên để nhờ hỗ trợ kỹ thuật. Lỗi của hệ thống Okta là không tự động quét và lọc bỏ các session token (mã phiên làm việc) nhạy cảm có trong các file HAR này, cho phép tin tặc lấy cắp token để giả mạo quyền quản trị viên. Mức độ nghiêm trọng: High (Đe dọa trực tiếp đến chuỗi nhận diện danh tính SSO).
-- **Hậu quả:** Tin tặc đã sử dụng các session token đánh cắp được để tấn công trực tiếp vào hệ thống của các khách hàng lớn của Okta như Cloudflare, BeyondTrust và 1Password.
-- **Giải pháp khắc phục:** Okta phải nâng cấp hệ thống hỗ trợ để tự động xóa/khử trùng các tiêu đề HTTP nhạy cảm (như cookie, authorization headers) trong các file HAR tải lên; khuyến nghị khách hàng xóa token trước khi gửi file hỗ trợ.
-- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI khi tóm tắt lỗi có thể bị ảo giác cho rằng tin tặc đã hack thành công vào cơ sở dữ liệu mật khẩu người dùng chính của Okta để lấy mã hash mật khẩu, thay vì hiểu rõ bản chất lỗi là việc lộ session token tạm thời từ các file log hỗ trợ kỹ thuật.
+- **Nguồn dẫn chứng:** [NVD NIST - CVE-2024-21762](https://nvd.nist.gov/vuln/detail/CVE-2024-21762)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗ hổng ghi ngoài phạm vi bộ đệm (Out-of-bounds Write) trong tiến trình `sslvpnd` (daemon xử lý kết nối SSL VPN) của hệ điều hành FortiOS. Lỗ hổng cho phép kẻ tấn công từ xa chưa xác thực gửi yêu cầu HTTP được thiết kế đặc biệt để thực thi mã tùy ý với quyền root. Mức độ nghiêm trọng: Critical (CVSS 9.6 - 9.8).
+- **Hậu quả:** Thiết bị tường lửa và cổng kết nối VPN bị kiểm soát hoàn toàn, tạo bàn đạp cho kẻ tấn công xâm nhập sâu vào mạng nội bộ của doanh nghiệp, phá hoại hệ thống và cài đặt mã độc gián điệp.
+- **Giải pháp khắc phục:** Cập nhật phiên bản FortiOS lên phiên bản đã vá lỗi (ví dụ: 7.4.3, 7.2.7 trở lên) hoặc vô hiệu hóa tính năng SSL VPN trên thiết bị như biện pháp giảm thiểu tạm thời.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể bị thiên lệch khi khẳng định rằng việc chỉ tắt "Web Mode" trên giao diện cấu hình của FortiOS là đủ bảo vệ thiết bị, trong khi khuyến cáo kỹ thuật chính thức từ nhà sản xuất cho thấy lỗi nằm ở lõi xử lý giao thức SSL VPN nên buộc phải cập nhật hệ điều hành hoặc tắt hoàn toàn tính năng SSL VPN.
 
-#### Lỗi 20: Lỗi Biểu thức Chính quy (Regex) gây sập dịch vụ Cloudflare (2022)
+#### Lỗi 20: Lỗi Vượt qua Cơ chế Cảnh báo An toàn Windows Defender SmartScreen (CVE-2024-21412) (2024)
 - **Loại lỗi:** General Software
-- **Nguồn dẫn chứng:** [Cloudflare Blog - Outage on June 21, 2022](https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/)
-- **Mô tả & Mức độ nghiêm trọng:** Trong quá trình cập nhật quy tắc định tuyến cho dịch vụ Web Application Firewall (WAF) của Cloudflare, một biểu thức chính quy (regular expression) bị viết sai lỗi logic cấu trúc. Sai sót này dẫn đến hiện tượng quay vòng tìm kiếm vô hạn (catastrophic backtracking), làm cho CPU của tất cả các máy chủ proxy của Cloudflare tăng vọt lên 100% và không thể xử lý lưu lượng mạng. Mức độ nghiêm trọng: High (Làm sập hệ thống hạ tầng CDN huyết mạch của Internet).
-- **Hậu quả:** Gây ra sự cố mất kết nối diện rộng tại 19 trung tâm dữ liệu huyết mạch của Cloudflare trong gần 1 giờ, làm gián đoạn truy cập của hàng triệu trang web và dịch vụ trực tuyến lớn trên thế giới.
-- **Giải pháp khắc phục:** Cloudflare nhanh chóng rút lại thay đổi cấu hình bị lỗi, đồng thời bổ sung các công cụ kiểm toán độ phức tạp của Regex trước khi triển khai thực tế và giới hạn thời gian thực thi tối đa (timeouts) cho các tiến trình quét Regex của WAF.
-- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI có thể ảo tưởng bằng cách tự viết ra một đoạn code Regex bị lỗi không có thật để làm ví dụ minh họa và khẳng định đó là đoạn Regex gốc gây lỗi của Cloudflare, hoặc nhầm lẫn sự cố cạn kiệt tài nguyên này với một cuộc tấn công từ chối dịch vụ (DDoS) từ bên ngoài.
+- **Nguồn dẫn chứng:** [NVD NIST - CVE-2024-21412](https://nvd.nist.gov/vuln/detail/CVE-2024-21412)
+- **Mô tả & Mức độ nghiêm trọng:** Lỗ hổng vượt qua tính năng bảo mật (Security Feature Bypass) của Windows Defender SmartScreen khi mở các tệp tin lối tắt (.url). Lỗi logic này cho phép kẻ tấn công tạo tệp tin lối tắt trỏ tới tệp thực thi độc hại khác trên máy chủ SMB, khiến hệ thống chạy mã mà không hiển thị cảnh báo Mark-of-the-Web (MotW). Mức độ nghiêm trọng: High (CVSS 8.1, bị khai thác zero-day thực tế bởi nhóm APT Water Hydra).
+- **Hậu quả:** Kẻ tấn công lừa đảo người dùng mở các tệp tin lối tắt độc hại để lây nhiễm trojan và các phần mềm đánh cắp thông tin tài chính nhạy cảm mà không gặp bất kỳ cảnh báo an toàn nào từ hệ điều hành.
+- **Giải pháp khắc phục:** Cập nhật các bản vá bảo mật Windows phát hành từ tháng 2 năm 2024 của Microsoft để sửa lỗi cơ chế kiểm tra nhãn bảo mật MotW của SmartScreen.
+- **Phát hiện ảo tưởng/thiên kiến của AI khi giải thích lỗi:** AI thường bị ảo giác nhầm lẫn lỗi này với các lỗ hổng thực thi mã tùy ý (RCE) trong nhân Windows (Kernel), hoặc giải thích không chính xác về cách thức nhãn bảo mật Mark-of-the-Web được ghi đè và lưu trữ trong luồng dữ liệu thay thế NTFS (Alternate Data Streams).
 
 
 
