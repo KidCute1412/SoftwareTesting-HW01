@@ -915,15 +915,23 @@ Hồ Tuấn Thanh
 | TC10 | Kiểm tra tính năng cắm nguồn và ổn định phích cắm. | Cắm phích cắm vào ổ điện chuẩn 220V. | 1. Cắm phích cắm quạt vào ổ điện gia dụng.<br>2. Đảm bảo phích cắm vừa khít và không bị lỏng lẻo. | Phích cắm kết nối ổn định, không có hiện tượng tia lửa điện hay lỏng lẻo khi lay nhẹ dây nguồn. | Phích cắm bị lỏng khi cắm ổ điện gia dụng, dễ bị hở điện khi tác động dây cắm | Không đạt | Không |
 | TC11 | Kiểm tra việc ngắt điện đột ngột bằng cách rút phích cắm. | Rút phích cắm khi quạt đang quay ở số 3. | 1. Cho quạt chạy ổn định ở mức số 3.<br>2. Rút trực tiếp phích cắm điện ra khỏi ổ cắm. | Quạt dừng hoạt động ngay lập tức và dừng quay dần theo quán tính mà không bị chập điện hay hỏng hóc. | Quạt dừng hoạt động và dừng quay dần theo quán tính và không bị chập điện | Đạt | Không |
 | TC12 | Kiểm tra chuyển đổi tốc độ liên tục tăng dần. | Nhấn liên tiếp các nút tốc độ tăng dần (1 -> 2 -> 3). | 1. Bật quạt ở mức số 1.<br>2. Nhấn phím số 2.<br>3. Nhấn phím số 3. | Quạt chuyển đổi mượt mà tốc độ gió từ nhẹ sang trung bình và mạnh, phím nhấn cũ tự nảy lên. | [Chờ thực thi] | [Chờ đánh giá] | Không |
-| TC13 | Kiểm tra chuyển đổi tốc độ giảm dần. | Nhấn liên tiếp các nút tốc độ giảm dần (3 -> 2 -> 1). | 1. Bật quạt ở mức số 3.<br>2. Nhấn phím số 2.<br>3. Nhấn phím số 1. | Quạt chuyển đổi mượt mà tốc độ gió giảm dần, phím cũ tự nảy lên và phím mới được khóa cố định. | [Chờ thực thi] | [Chờ đánh giá] | Có |
-| TC14 | Kiểm tra độ ổn định của quạt khi chạy trên mặt phẳng nghiêng 10 độ. | Đặt quạt hoạt động ở số 3 trên bề mặt dốc nhẹ. | 1. Đặt quạt trên bề mặt nghiêng khoảng 10 độ.<br>2. Bật quạt chạy ở tốc độ cao nhất (số 3). | Quạt đứng vững vàng, không bị đổ ngã hoặc dịch chuyển vị trí do rung lắc trong 5 phút. | [Chờ thực thi] | [Chờ đánh giá] | Có |
-| TC15 | Kiểm tra khả năng hoạt động ổn định liên tục. | Cho quạt chạy liên tục ở mức số 3 trong vòng 1 giờ. | 1. Đặt quạt ở nơi thông thoáng.<br>2. Bật quạt chạy ở mức số 3.<br>3. Theo dõi hoạt động của quạt liên tục trong 1 giờ. | Quạt hoạt động liên tục bình thường, động cơ không bị nóng quá tải (bốc khói/chập điện) và duy trì tốc độ ổn định. | [Chờ thực thi] | [Chờ đánh giá] | Có |
+| TC13 | Kiểm tra việc nhấn nhiều nút cùng lúc. | Nhấn cùng lúc nút 1 và 2 hoặc 1 và 3 | 1. Bật quạt ở mức số 1.<br>2. Nhấn cùng lúc phím số 1 và phím số 3. | 1. Quạt không chuyển đổi tốc độ, cả hai phím đều không thay đổi trạng thái (vẫn ở mức số 1). | Quạt không chuyển đổi tốc độ, cả hai phím đều không thay đổi trạng thái (vẫn ở mức số 1) | Đạt | Không |
+| TC14 | Kiểm tra việc suy kiệt luồng khí nạp vào quạt. | Bật quạt số 3 khi mặt sau lồng quạt bị ép sát vào vật cản phẳng. | 1. Đặt mặt sau của quạt áp sát hoàn toàn vào bức tường hoặc tấm rèm vải. <br>2. Bật quạt ở tốc độ cao nhất (số 3). <br>3. Quan sát trong 3-5 phút. | Quạt không bị hút lật ngược về sau do chênh lệch áp suất, cầu chì nhiệt (nếu có) tự ngắt khi động cơ quá nóng do không thể tản nhiệt, không bốc khói.  | Quạt không bị hút lại phía sau và không quá nóng | Đạt | Có |
+| TC15 | Kiểm tra khởi động khi đang chịu mô-men xoắn ngược (Reverse Momentum). | Khởi động mức số 3 khi cánh quạt đang bị quay tít theo chiều ngược lại. |1. Rút điện. Dùng tay (hoặc gió mạnh) đẩy cánh quạt quay thật nhanh theo chiều ngược kim đồng hồ.<br>2. Đang lúc cánh quay ngược mạnh, cắm điện và nhấn ngay nút số 3. |Tụ điện và động cơ hãm được đà ngược, đảo chiều và quay đúng hướng mà không bị rít máy kéo dài, kẹt motor hoặc nổ tụ khởi động. | Quạt không bị rít máy kéo dài, kẹt motor hoặc nổ tụ khởi động | Đạt | Có |
 
 ### 4.4. Minh chứng AI bỏ sót các ca biên
 - **Ảnh chụp cuộc hội thoại với AI chứng minh bỏ sót:**
-  ![Minh chứng hội thoại AI](path/to/ai_missed_edgecases.png)
+  ![Minh chứng hội thoại AI](images/RQ3_AITestCase.png)
 - **Giải thích lý do AI bỏ sót:**
-  - [Giải thích chi tiết tại đây]
+  - TC13:
+    - AI cho rằng: các nút bấm tốc độ (1, 2, 3) là dạng Radio Button hoặc kiểu dữ liệu Enum trong code—nghĩa là trạng thái độc quyền. Nếu speed = 1 thì không thể speed = 3. Vì vậy, khi kiểm tra nhấn cùng lúc cả 2 nút, AI cho rằng hệ thống sẽ bỏ qua hành động đó.
+    - Thực tế: các nút trên quạt là các phím bấm hoạt động độc lập. Mỗi lần nhấn là một lần thay đổi trạng thái. Mặc dù có thể không được lập trình để xử lý sự kiện này, nhưng về mặt người dùng, đó vẫn là một tình huống có thể xảy ra và cần được kiểm thử.
+  - TC14:
+    - AI cho rằng: quạt hoạt động như một blackbox với input là điện, output la gió thổi ra phía trước. Quạt sẽ không thể khởi động do không có luồng khí đi vào
+    - Thực tế: Quạt là thiết bị chuyển động chất lưu. Để có gió đẩy ra trước, nó phải hút không khí từ phía sau để làm mát chính động cơ của nó. Nếu đặt sát một bức tường phẳng hoặc bị rèm vải hút dính chặt vào lồng sau, động cơ sẽ hoạt động trong môi trường chân không cục bộ. Thiếu tản nhiệt + tăng tải khí động học sẽ làm cuộn dây nóng lên cực nhanh và có nguy cơ hỏa hoạn.
+  - TC15: 
+    - AI cho rằng: Trạng thái khởi động mặc định là vận tốc v = 0. AI thường chỉ test từ đứng yên chuyển sang chuyển động.
+    - Thực tế: Nếu cánh quạt đang bị gió trời thổi làm quay tít theo chiều ngược lại (hoặc bị trẻ em dùng tay quay ngược), cánh đang mang động năng âm. Khi cắm điện bật số 3 lúc này, tụ điện khởi động và từ trường phải sinh ra một lực cản khổng lồ để hãm cái đà ngược đó lại trước khi ép nó quay đúng chiều. Dòng điện nạp vào lúc này tăng vọt, rất dễ làm nổ tụ điện hoặc đứt cầu chì nhiệt. 
 
 ### 4.5. Thực thi kiểm thử thực tế (5 ca kiểm thử)
 *Đường liên kết YouTube Unlisted cho 5 video thực thi thực tế (mỗi video < 60s, có giọng thuyết minh).*
