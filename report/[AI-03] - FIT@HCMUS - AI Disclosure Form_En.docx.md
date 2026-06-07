@@ -1,6 +1,6 @@
 **Faculty of Information Technology (FIT) – Ho Chi Minh City University of Science (HCMUS)**
 
-**CS423 / CSC13003 – Software Testing (AI-augmented · 2026\)**
+**CS423 / CSC13003 – Software Testing (AI-augmented · 2026)**
 
 **AI POLICY · TEMPLATES — 2026 v1.0**
 
@@ -10,109 +10,78 @@
 
 *Adapted from Med Kharbach, PhD (2026) — AI Use Policy Templates for Higher Education. CC BY-NC-SA 4.0. This adaptation is prepared for FIT@HCMUS – CS423 / CSC15003 Software Testing course.*
 
-## **1\. Course & Student Info**
+## **1. Course & Student Info**
 
 | Field | Value |
 | :---- | :---- |
 | **Course:** | CS423 / CSC13003 – Software Testing |
-| **Assignment ID:** |  |
-| **Assignment Title:** |  |
-| **AI Use Category (1–5):** | Category \_\_\_\_ |
-| **Date:** |  |
-| **Student name:** |  |
-| **Student ID:** |  |
+| **Assignment ID:** | HW\#01 |
+| **Assignment Title:** | Job Market Analysis, Software Defects, and Test Case Design for Physical Product |
+| **AI Use Category (1–5):** | Category 3: AI-Assisted (permitted with disclosure) |
+| **Date:** | 08/06/2026 |
+| **Student name:** | Lê Tuấn Lộc |
+| **Student ID:** | 23127404 |
 
-## **2\. Disclosure Questions**
+## **2. Disclosure Questions**
 
-### **1\. AI tool(s) used:**
+### **1. AI tool(s) used:**
 
-*List every AI tool used for this assignment (e.g., AI Tool (e.g., ChatGPT, Claude, Gemini), ChatGPT, GitHub Copilot, Cursor, Gemini).*
+Gemini 3.5 Flash in Antigravity
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+### **2. Stage(s) of the assignment where AI was used:**
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+*Tick all that apply: [x] brainstorming  [ ] outlining  [x] drafting  [ ] feedback  [x] revision  [ ] coding  [ ] data analysis  [ ] visual design  [ ] other (specify).*
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+AI was utilized in the brainstorming and initial drafting stages to outline the report structure based on the assignment checklist. It was also used to generate the draft lists of 20 software defects and 15 functional test cases for a stand fan SUT, followed by subsequent revision sessions to correct inaccuracies.
 
-### **2\. Stage(s) of the assignment where AI was used:**
+### **3. Main prompts or tasks given to the AI:**
 
-*Tick all that apply: \[ \] brainstorming  \[ \] outlining  \[ \] drafting  \[ \] feedback  \[ \] revision  \[ \] coding  \[ \] data analysis  \[ \] visual design  \[ \] other (specify).*
+* **Prompt 1 (Drafting Report Template):**
+  `"dựa vào checklist, hãy tạo template mẫu cho report/Report.md. Có trang bìa đầy đủ."`
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+* **Prompt 2 (Drafting Software Defects):**
+  `"Bạn là một Chuyên gia Đảm bảo Chất lượng Phần mềm (QA Engineer) cấp cao với khả năng nghiên cứu và phân tích kỹ thuật sâu. Hãy thực hiện nhiệm vụ sau đây dựa trên yêu cầu: Tìm kiếm và liệt kê 20 lỗ hổng/lỗi phần mềm (Software Defects) nổi tiếng được công bố trong giai đoạn 2022–2026. Yêu cầu bắt buộc: Phải có ít nhất 5 lỗi liên quan trực tiếp đến AI/LLM..."`
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+* **Prompt 3 (Drafting Fan Test Cases):**
+  `"Act as a QA/QC Engineer. Design exactly 15 functional test cases for a standard household electric stand fan (cây quạt máy đứng bình thường). The fan has the following basic features: Power cord and plug; 3 speed buttons; Oscillation knob; Height adjustment clutch/screw; Safety grill and plastic fan blades. Please output the test cases in a markdown table format..."`
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+### **4. Specific parts of the work AI contributed to:**
 
-### **3\. Main prompts or tasks given to the AI:**
+* AI generated the structural template and outline for the main report (`Report.md`).
+* AI generated the initial list of 20 software defects and the baseline 15 functional test cases for the stand fan.
+* AI did NOT contribute to the physical device test execution, video recording, screenshots, GitHub issue tracking, or writing the AI Critique section.
 
-*Paste the 2–3 most impactful prompts verbatim. For the full transcript, attach Appendix A (prompt\_log.md).*
+### **5. How I reviewed, revised, or verified the AI output:**
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+* **Report Template:** Verified against the `requirements_checklist.md` to ensure all mandatory sections were mapped.
+* **Software Defects:** Manually cross-checked each CVE on the official NVD NIST website. I identified and removed 5 incorrect/broken links, replacing them with verified CVEs (e.g. CVE-2023-7028, CVE-2023-38831) and manually corrected their descriptions.
+* **Fan Test Cases:** Inspected SUT features and removed the height adjustment test cases (since the physical fan has a fixed height). Replaced them with head-tilt test cases and manually designed 3 complex physical/environmental edge cases (TC13, TC14, TC15) which the AI missed.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+### **6. Citation (if required by course style guide):**
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Google. (2026). Gemini 3.5 Flash in Antigravity [Large language model]. https://gemini.google.com
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-### **4\. Specific parts of the work AI contributed to:**
-
-*Be specific. Example: 'AI generated TC01–TC15 in Section 3.2; I rewrote TC04 and TC11; AI did NOT contribute to Sections 1, 2, 4, or the AI Critique.'*
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-### **5\. How I reviewed, revised, or verified the AI output:**
-
-*Describe your verification method (ran the test, checked the spec, asked the TA, looked up RFC, cross-checked with the ISTQB syllabus, etc.).*
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-### **6\. Citation (if required by course style guide):**
-
-*Software Testing uses the IEEE style. Example: Anthropic. (2026). AI Tool (e.g., ChatGPT, Claude, Gemini) \[Large language model\]. https://claude.ai*
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-## **3\. Statement of Honesty**
+## **3. Statement of Honesty**
 
 *By signing below, I confirm that the disclosure above is accurate and complete. I understand that undisclosed or false disclosure of AI use is treated as academic misconduct and may result in a 0 grade for the assignment and disciplinary referral.*
 
 ## **Signature**
 
-| Student name (printed): |  |
+| Student name (printed): | Lê Tuấn Lộc |
 | :---- | :---- |
-| **Student ID:** |  |
-| **Class / Cohort:** |  |
+| **Student ID:** | 23127404 |
+| **Class / Cohort:** | 23KTPM3 |
 | **Course:** | CS423 / CSC13003 – Software Testing |
-| **Instructor:** |  |
-| **Date:** |  |
-| **Signature:** |  |
+| **Instructor:** | Dr. Lam Quang Vu / Dr. Tran Duy Hoang / MSc. Tran Thi Bich Hanh / MSc. Truong Phuoc Loc / MSc. Ho Tuan Thanh |
+| **Date:** | 08/06/2026 |
+| **Signature:** | Lê Tuấn Lộc |
 
 ## **References**
 
 * Kharbach, M. (2026). AI Use Policy Templates for Higher Education. CC BY-NC-SA 4.0.  
 * ISTQB Foundation Level Syllabus (latest version).  
 * Hardman, P. (2025). A Post-AI Learning Taxonomy.  
-* Fuster Rabella, M. (2025). OECD Education Working Paper No. 338\.  
+* Fuster Rabella, M. (2025). OECD Education Working Paper No. 338.  
 * Perkins, M., Roe, J., & Furze, L. (2025). AI Assessment Scale.  
 * Anthropic (2025). Building reliable AI test agents — engineering blog.  
 * DeepEval & Promptfoo documentation — testing frameworks for LLM systems.

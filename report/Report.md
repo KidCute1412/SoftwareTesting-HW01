@@ -39,35 +39,87 @@ Hồ Tuấn Thanh
 2. [Yêu cầu 1: Thị trường việc làm QA/QC 2026+](#2-yêu-cầu-1-thị-trường-việc-làm-qaqc-2026)
 3. [Yêu cầu 2: 20 Lỗi phần mềm nổi tiếng giai đoạn 2022–2026](#3-yêu-cầu-2-20-lỗi-phần-mềm-nổi-tiếng-giai-đoạn-20222026)
 4. [Yêu cầu 3: Thiết kế & Thực thi kiểm thử cho thiết bị vật lý](#4-yêu-cầu-3-thiết-kế--thực-thi-kiểm-thử-cho-thiết-bị-vật-lý)
-5. [Báo cáo tuân thủ AI (AI Compliance & Audit Report)](#5-báo-cáo-tuân-thủ-ai-ai-compliance--audit-report)
-6. [Nhận xét về AI (AI Critique)](#6-nhận-xét-về-ai-ai-critique)
-7. [Khai báo bắt buộc & Biểu mẫu (Mandatory Disclosure & Forms)](#7-khai-báo-bắt-buộc--biểu-mẫu-mandatory-disclosure--forms)
+5. [Nhận xét về AI (AI Critique)](#5-nhận-xét-về-ai-ai-critique)
+6. [Khai báo bắt buộc & Biểu mẫu (Mandatory Disclosure & Forms)](#6-khai-báo-bắt-buộc--biểu-mẫu-mandatory-disclosure--forms)
 
 ---
 
 ## 1. Phần khởi động (Warm-up): Bản đồ tư duy ISTQB Quy trình & Vai trò QA/QC
 
 ### 1.1. Bản đồ tư duy do AI tạo ra (Ban đầu)
-- **Công cụ AI sử dụng:** [Ví dụ: ChatGPT / Claude / Gemini]
+- **Công cụ AI sử dụng:** Gemini 3.5 Flash in Antigravity
 - **Prompt yêu cầu vẽ bản đồ:**
-  > [Nhập prompt của bạn tại đây]
-- **Hình ảnh/Markdown Mindmap ban đầu:**
-  ![Mindmap ban đầu](path/to/original_mindmap.png)
+  > "Hãy đóng vai trò là Chuyên gia Kiểm thử Phần mềm. Hãy thiết kế một bản đồ tư duy (mindmap) bằng ngôn ngữ Mermaid biểu diễn cấu trúc vai trò của QA (Quality Assurance), QC (Quality Control) và quy trình kiểm thử phần mềm theo chuẩn ISTQB."
+- **Markdown Mindmap ban đầu:**
+  ```mermaid
+  mindmap
+    root((QA/QC Roles & ISTQB Process))
+      Quality Assurance (QA)
+        Process Improvement
+        Standards Definition
+        ::icon(fa fa-book)
+        Test Execution
+        Defect Correction (Debugging)
+      Quality Control (QC)
+        Product Evaluation
+        ::icon(fa fa-check)
+        Test Cases Design
+        Bug Logging
+      ISTQB Test Process
+        Planning and Design
+          Define Objectives
+          Write Test Cases
+        Execution and Debugging
+          Run Tests
+          Fix Bugs
+        Reporting
+          Test Summary Report
+  ```
 
 ### 1.2. Phân tích 3 lỗi sai/thiếu sót trong Mindmap ban đầu
 1. **Lỗi/Thiếu sót 1:**
-   - *Mô tả:* [Mô tả lỗi sai hoặc phần thiếu sót của AI so với chuẩn ISTQB]
-   - *Lý do sai/thiếu:* [Giải thích dựa trên kiến thức ISTQB]
+   - *Mô tả:* Đưa hoạt động "Debugging (Sửa lỗi)" vào nhánh của QA và trong bước "Execution and Debugging" của quy trình kiểm thử.
+   - *Lý do sai/thiếu:* Theo chuẩn ISTQB FL v4.0 (Mục 1.1.2), kiểm thử (Testing) và gỡ lỗi (Debugging) là hai hoạt động riêng biệt. Lập trình viên (Developer) chịu trách nhiệm gỡ lỗi (tìm nguyên nhân và khắc phục lỗi), trong khi kiểm thử viên (Tester/QC) chỉ thực hiện kiểm thử để phát hiện lỗi (Failure) và báo cáo.
 2. **Lỗi/Thiếu sót 2:**
-   - *Mô tả:* [Mô tả lỗi sai hoặc phần thiếu sót của AI so với chuẩn ISTQB]
-   - *Lý do sai/thiếu:* [Giải thích dựa trên kiến thức ISTQB]
+   - *Mô tả:* Đưa hoạt động "Test Execution (Thực thi kiểm thử)" vào nhánh Quality Assurance (QA).
+   - *Lý do sai/thiếu:* QA là hoạt động hướng quy trình (process-oriented), tập trung vào cải tiến và ngăn ngừa lỗi xảy ra. QC (Quality Control) mới là hoạt động hướng sản phẩm (product-oriented), bao gồm việc thiết kế và thực thi kiểm thử (Test Execution) để đánh giá chất lượng sản phẩm trực tiếp.
 3. **Lỗi/Thiếu sót 3:**
-   - *Mô tả:* [Mô tả lỗi sai hoặc phần thiếu sót của AI so với chuẩn ISTQB]
-   - *Lý do sai/thiếu:* [Giải thích dựa trên kiến thức ISTQB]
+   - *Mô tả:* Gộp chung "Planning and Design" làm một bước, gộp "Execution and Debugging" làm một bước, và bỏ sót các giai đoạn quan trọng của quy trình kiểm thử như "Test Monitoring and Control" và "Test Completion".
+   - *Lý do sai/thiếu:* Theo quy trình kiểm thử chuẩn của ISTQB FL v4.0 (Mục 1.4), quy trình gồm 7 giai đoạn riêng biệt: Test Planning, Test Monitoring and Control, Test Analysis, Test Design, Test Implementation, Test Execution, và Test Completion. Việc gộp hoặc bỏ qua các giai đoạn này làm giảm tính kiểm soát và sai lệch quy trình chuẩn hóa.
 
 ### 1.3. Bản đồ tư duy hoàn chỉnh (Đã chỉnh sửa)
 - **Hình ảnh/Markdown Mindmap sau khi sửa lỗi:**
-  ![Mindmap hoàn chỉnh](path/to/final_mindmap.png)
+  ```mermaid
+  mindmap
+    root((QA/QC Roles & ISTQB Process))
+      Quality Assurance (QA - Process Oriented)
+        Process Improvement
+        ::icon(fa fa-arrows-spin)
+        Standards & Guidelines Definition
+        Quality Audits
+        Defect Prevention
+      Quality Control (QC - Product Oriented)
+        Product Quality Evaluation
+        ::icon(fa fa-bullseye)
+        Dynamic Testing
+        Static Testing (Reviews)
+        Defect Identification & Reporting
+      ISTQB Test Process (FL v4.0)
+        Test Planning
+          Define scope & objectives
+        Test Monitoring & Control
+          Track metrics & adjust plan
+        Test Analysis
+          Analyze test basis (what to test)
+        Test Design
+          Design test cases (how to test)
+        Test Implementation
+          Create test suites & env setup
+        Test Execution
+          Run tests & log defects
+        Test Completion
+          Archive testware & close reports
+  ```
 
 ---
 
@@ -907,15 +959,15 @@ Hồ Tuấn Thanh
 | TC02 | Kiểm tra tính năng hoạt động quạt ở tốc độ trung bình (Mức 2). | Nhấn nút số 2 khi quạt đang tắt và cắm điện. | 1. Cắm dây nguồn vào ổ điện.<br>2. Nhấn nút tốc độ 2 trên thân quạt. | Cánh quạt bắt đầu quay và hoạt động ổn định ở tốc độ trung bình, luồng gió mạnh hơn mức 1. | Quạt hoạt động êm, gió mạnh hơn mức 1 | Đạt | Không |
 | TC03 | Kiểm tra tính năng hoạt động quạt ở tốc độ cao nhất (Mức 3). | Nhấn nút số 3 khi quạt đang tắt và cắm điện. | 1. Cắm dây nguồn vào ổ điện.<br>2. Nhấn nút tốc độ 3 trên thân quạt. | Cánh quạt bắt đầu quay và hoạt động ổn định ở tốc độ cao nhất, luồng gió mạnh nhất. | Quạt hoạt động êm, gió mạnh hơn mức 1 và 2 | Đạt | Không |
 | TC04 | Kiểm tra chức năng tắt quạt bằng nút OFF (0). | Nhấn nút số 0 khi quạt đang hoạt động ở số 3. | 1. Cắm nguồn và bật quạt ở mức số 3.<br>2. Nhấn nút số 0 trên thân quạt. | Cánh quạt quay chậm dần rồi dừng hẳn, đèn báo hiệu (nếu có) tắt. | Cánh quạt quay chậm dần và dừng hẳn | Đạt | Không |
-| TC05 | Kiểm tra tính năng chuyển hướng quay qua lại của quạt (Oscillation). | Nhấn nút tuốc năng xuống khi quạt đang chạy. | 1. Cắm nguồn và bật quạt ở mức số 1.<br>2. Ấn nút tuốc năng phía sau hộp động cơ xuống. | Đầu quạt bắt đầu quay đều từ trái sang phải và ngược lại với góc quay tiêu chuẩn. | Quạt quay qua quay lại đều với mức gió chuẩn mức số 1 | Đạt | Không |
+| TC05 | Kiểm tra tính năng chuyển hướng quay qua lại của quạt (Oscillation). | Nhấn nút tuốc năng xuống khi quạt đang chạy. | 1. Cắm nguồn và bật quạt ở mức số 1.<br>2. Ấn nút tuốc năng phía sau hộp động cơ xuống. | Đầu quạt bắt đầu quay đều từ trái sang phải và ngược lại với góc quay tiêu chuẩn. | Quạt phát ra tiếng kêu cọt kẹt lớn khi quay chuyển hướng và thỉnh thoảng bị kẹt tại một góc. | Không đạt | Không |
 | TC06 | Kiểm tra tính năng dừng quay chuyển hướng của quạt. | Kéo nút tuốc năng lên khi quạt đang quay chuyển hướng. | 1. Bật quạt chạy ở trạng thái quay chuyển hướng.<br>2. Kéo nút tuốc năng phía sau động cơ lên. | Đầu quạt dừng quay chuyển hướng ngay lập tức và giữ cố định ở hướng hiện tại. | Đầu quạt dừng quay chuyển hướng ngay khi kéo nút tuốc năng phái sau động cơ lên | Đạt | Không |
 | TC07 | Kiểm tra chức năng điều chỉnh góc ngửa của đầu quạt hướng lên trên (Tilt up). | Dùng tay tác động lực hướng lên vào đầu quạt. | 1. Giữ vững đế quạt.<br>2. Dùng tay đẩy nhẹ đầu quạt ngửa lên trên cho đến khi nghe tiếng khớp cố định. | Đầu quạt hướng lên trên ở góc tiêu chuẩn, khớp giữ chắc chắn và không bị tự rơi gập xuống khi quạt hoạt động. | Đầu quạt hướng lên trên và giữ chắc chắn, không bị tự rơi gập xuống khi quạt hoạt động | Đạt | Không |
-| TC08 | Kiểm tra chức năng điều chỉnh góc cúi của đầu quạt hướng xuống dưới (Tilt down). | Dùng tay tác động lực hướng xuống vào đầu quạt. | 1. Giữ vững đế quạt.<br>2. Dùng tay đẩy nhẹ đầu quạt cúi xuống dưới cho đến khi nghe tiếng khớp cố định. | Đầu quạt hướng xuống dưới ở góc tiêu chuẩn, khớp giữ chắc chắn và không bị tự ngửa lên khi quạt hoạt động. | Đầu quạt hướng xuống dưới và giữ chắc chắn, không bị tự ngửa lên khi quạt hoạt động | Đạt | Không |
+| TC08 | Kiểm tra chức năng điều chỉnh góc cúi của đầu quạt hướng xuống dưới (Tilt down). | Dùng tay tác động lực hướng xuống vào đầu quạt. | 1. Giữ vững đế quạt.<br>2. Dùng tay đẩy nhẹ đầu quạt cúi xuống dưới cho đến khi nghe tiếng khớp cố định. | Đầu quạt hướng xuống dưới ở góc tiêu chuẩn, khớp giữ chắc chắn và không bị tự ngửa lên khi quạt hoạt động. | Khớp quạt bị lỏng, khi quạt chạy rung lắc mạnh ở số 3 làm đầu quạt tự động gập cụp xuống dưới. | Không đạt | Không |
 | TC09 | Kiểm tra độ an toàn của lồng quạt bảo vệ (Safety Grill). | Kiểm tra khoảng cách các nan lồng quạt bằng dụng cụ giả lập ngón tay trẻ em. | 1. Lắp lồng quạt chắc chắn.<br>2. Dùng que thử tiêu chuẩn (hoặc kiểm tra trực quan) xem nan quạt có đủ khít để chặn ngón tay chạm vào cánh quạt đang quay. | Khe hở giữa các nan lồng quạt đủ nhỏ, không cho phép ngón tay chạm tới cánh quạt đang quay. | Khe hở quạt vẫn còn phần bị rộng, ngón tay có thể chạm tới cánh quạt đang quay | Không đạt | Không |
 | TC10 | Kiểm tra tính năng cắm nguồn và ổn định phích cắm. | Cắm phích cắm vào ổ điện chuẩn 220V. | 1. Cắm phích cắm quạt vào ổ điện gia dụng.<br>2. Đảm bảo phích cắm vừa khít và không bị lỏng lẻo. | Phích cắm kết nối ổn định, không có hiện tượng tia lửa điện hay lỏng lẻo khi lay nhẹ dây nguồn. | Phích cắm bị lỏng khi cắm ổ điện gia dụng, dễ bị hở điện khi tác động dây cắm | Không đạt | Không |
 | TC11 | Kiểm tra việc ngắt điện đột ngột bằng cách rút phích cắm. | Rút phích cắm khi quạt đang quay ở số 3. | 1. Cho quạt chạy ổn định ở mức số 3.<br>2. Rút trực tiếp phích cắm điện ra khỏi ổ cắm. | Quạt dừng hoạt động ngay lập tức và dừng quay dần theo quán tính mà không bị chập điện hay hỏng hóc. | Quạt dừng hoạt động và dừng quay dần theo quán tính và không bị chập điện | Đạt | Không |
-| TC12 | Kiểm tra chuyển đổi tốc độ liên tục tăng dần. | Nhấn liên tiếp các nút tốc độ tăng dần (1 -> 2 -> 3). | 1. Bật quạt ở mức số 1.<br>2. Nhấn phím số 2.<br>3. Nhấn phím số 3. | Quạt chuyển đổi mượt mà tốc độ gió từ nhẹ sang trung bình và mạnh, phím nhấn cũ tự nảy lên. | [Chờ thực thi] | [Chờ đánh giá] | Không |
-| TC13 | Kiểm tra việc nhấn nhiều nút cùng lúc. | Nhấn cùng lúc nút 1 và 2 hoặc 1 và 3 | 1. Bật quạt ở mức số 1.<br>2. Nhấn cùng lúc phím số 1 và phím số 3. | 1. Quạt không chuyển đổi tốc độ, cả hai phím đều không thay đổi trạng thái (vẫn ở mức số 1). | Quạt không chuyển đổi tốc độ, cả hai phím đều không thay đổi trạng thái (vẫn ở mức số 1) | Đạt | Không |
+| TC12 | Kiểm tra chuyển đổi tốc độ liên tục tăng dần. | Nhấn liên tiếp các nút tốc độ tăng dần (1 -> 2 -> 3). | 1. Bật quạt ở mức số 1.<br>2. Nhấn phím số 2.<br>3. Nhấn phím số 3. | Quạt chuyển đổi mượt mà tốc độ gió từ nhẹ sang trung bình và mạnh, phím nhấn cũ tự nảy lên. | Quạt chuyển đổi mượt mà tốc độ gió từ nhẹ sang trung bình và mạnh, phím nhấn cũ tự nảy lên. | Đạt | Không |
+| TC13 | Kiểm tra việc nhấn nhiều nút cùng lúc. | Nhấn cùng lúc nút 1 và 2 hoặc 1 và 3 | 1. Bật quạt ở mức số 1.<br>2. Nhấn cùng lúc phím số 1 và phím số 3. | 1. Quạt không chuyển đổi tốc độ, cả hai phím đều không thay đổi trạng thái (vẫn ở mức số 1). | Khi nhấn cùng lúc, cả hai phím 1 và 3 đều bật lên, kết quả quạt ngắt điện về mức 0. | Không đạt | Có |
 | TC14 | Kiểm tra việc suy kiệt luồng khí nạp vào quạt. | Bật quạt số 3 khi mặt sau lồng quạt bị ép sát vào vật cản phẳng. | 1. Đặt mặt sau của quạt áp sát hoàn toàn vào bức tường hoặc tấm rèm vải. <br>2. Bật quạt ở tốc độ cao nhất (số 3). <br>3. Quan sát trong 3-5 phút. | Quạt không bị hút lật ngược về sau do chênh lệch áp suất, cầu chì nhiệt (nếu có) tự ngắt khi động cơ quá nóng do không thể tản nhiệt, không bốc khói.  | Quạt không bị hút lại phía sau và không quá nóng | Đạt | Có |
 | TC15 | Kiểm tra khởi động khi đang chịu mô-men xoắn ngược (Reverse Momentum). | Khởi động mức số 3 khi cánh quạt đang bị quay tít theo chiều ngược lại. |1. Rút điện. Dùng tay (hoặc gió mạnh) đẩy cánh quạt quay thật nhanh theo chiều ngược kim đồng hồ.<br>2. Đang lúc cánh quay ngược mạnh, cắm điện và nhấn ngay nút số 3. |Tụ điện và động cơ hãm được đà ngược, đảo chiều và quay đúng hướng mà không bị rít máy kéo dài, kẹt motor hoặc nổ tụ khởi động. | Quạt không bị rít máy kéo dài, kẹt motor hoặc nổ tụ khởi động | Đạt | Có |
 
@@ -943,61 +995,34 @@ Hồ Tuấn Thanh
 5. **TC_ [Mã TC] - [Tên TC]:** [Link YouTube Unlisted]
 
 ### 4.6. Lưu vết lỗi tìm thấy trên GitHub Issues
-- **Đường dẫn Repository GitHub:** [Link Repo]
+- **Đường dẫn Repository GitHub:** https://github.com/KidCute1412/SoftwareTesting-HW01
 - **Ảnh chụp màn hình trang GitHub Issues (hiển thị rõ tên tài khoản GitHub của bạn):**
   ![GitHub Issues Screenshot](path/to/github_issues.png)
 
 ---
 
-## 5. Báo cáo tuân thủ AI (AI Compliance & Audit Report)
-
-### 5.1. Nhật ký Kiểm toán AI (AI Audit Report - AI 02)
-*Thực hiện biểu mẫu cho từng tạo tác do AI hỗ trợ.*
-
-#### Tạo tác 1: [Tên tạo tác, ví dụ: mindmap ban đầu / 12 test cases đầu tiên]
-1. **Chi tiết Prompt & Công cụ:**
-   - *Công cụ:* [Tên AI, ví dụ: ChatGPT 4o]
-   - *Nhãn thời gian:* [Giờ - Ngày/Tháng/Năm]
-   - *Prompt:*
-     > [Nội dung prompt]
-2. **Kết quả phản hồi của AI:**
-   - [Đính kèm text hoặc ảnh chụp màn hình viền đỏ chú thích]
-3. **Đánh giá kết quả (Verdict):** `[VALID / INVALID / INCOMPLETE]`
-4. **Lập luận đối chiếu ISTQB/Học phần (2-5 câu):**
-   - [Nội dung lập luận]
-5. **Phần chỉnh sửa của sinh viên (Student fix):**
-   - [Làm nổi bật những phần chỉnh sửa cụ thể]
-
-*(Tạo thêm các mục Tạo tác tiếp theo nếu có nhiều tạo tác được AI hỗ trợ)*
-
-### 5.2. Tóm tắt và kết luận về AI
-- **Tỷ lệ chính xác của AI:** [Tỷ lệ % ước lượng và nhận xét]
-- **Khi nào nên dùng AI:** [Kết luận rút ra]
-- **Khi nào không nên dùng AI:** [Kết luận rút ra]
-
----
-
-## 6. Nhận xét về AI (AI Critique)
+## 5. Nhận xét về AI (AI Critique)
 *Viết từ 200–300 từ đánh giá hiệu quả, sai sót của AI và bài học rút ra.*
 
-[Nhập đoạn văn nhận xét của sinh viên tại đây...]
+Trong quá trình làm bài tập HW01, việc sử dụng Gemini 3.5 Flash mang lại hiệu quả cao ở giai đoạn khởi đầu nhờ khả năng xây dựng nhanh cấu trúc báo cáo (Report template) và liệt kê sơ bộ các ca kiểm thử chức năng cơ bản. Tuy nhiên, AI bộc lộ những sai sót nghiêm trọng về tính chính xác ngữ cảnh. Cụ thể, mô hình đã tự ảo tưởng tính năng điều chỉnh chiều cao cho cây quạt đứng (vốn là loại cố định thân), cung cấp các liên kết nguồn lỗi 404 cho các sự cố bảo mật, và hoàn toàn bỏ sót các ca kiểm thử biên vật lý phức tạp (như mô-men xoắn ngược hay suy kiệt khí nạp). Sự thất bại này xuất phát từ việc AI chỉ hoạt động dựa trên xác suất từ ngữ và mô hình hóa hệ thống dưới dạng trạng thái lý thuyết đơn giản, thiếu đi khả năng tương tác vật lý trực quan với thiết bị thực tế. Bài học cốt lõi rút ra là nguyên lý kiểm thử "không tin cậy tuyệt đối vào AI". Chúng ta chỉ nên xem AI là trợ lý phác thảo ý tưởng ban đầu, đồng thời bắt buộc phải thực hiện kiểm chứng thủ công nghiêm ngặt (human-in-the-loop) đối với tất cả nguồn dẫn chứng và các ràng buộc đặc thù của sản phẩm thực tế trước khi đưa vào báo cáo.
 
 ---
 
-## 7. Khai báo bắt buộc & Biểu mẫu (Mandatory Disclosure & Forms)
+## 6. Khai báo bắt buộc & Biểu mẫu (Mandatory Disclosure & Forms)
 
-### 7.1. Khai báo bắt buộc (Mandatory Disclosure)
+### 6.1. Khai báo bắt buộc (Mandatory Disclosure)
 Tôi xin khai báo các nội dung và mức độ sử dụng AI trong bài tập này như sau:
-- [ ] **Khởi động:** Sử dụng AI để tạo bản đồ tư duy cơ bản, sau đó tự điều chỉnh lỗi.
-- [ ] **Yêu cầu 1:** Sử dụng AI để [mô tả, ví dụ: phân tích tác động của AI trong JD].
-- [ ] **Yêu cầu 2:** Sử dụng AI để [mô tả, ví dụ: dịch thuật hoặc tóm tắt các lỗi bảo mật].
-- [ ] **Yêu cầu 3:** Sử dụng AI để thiết kế 12 ca kiểm thử cơ bản cho thiết bị.
-- [ ] Không sử dụng AI cho các mục chống gian lận (quay video, ảnh thẻ sinh viên, viết mã kiểm thử thực tế).
+- [x] **Khởi động:** Sử dụng AI để tạo bản đồ tư duy cơ bản, sau đó tự điều chỉnh lỗi.
+- [x] **Yêu cầu 1:** Sử dụng AI để soạn thảo các phần phân tích tác động của AI (AI Impact Analysis) cho các tin tuyển dụng.
+- [x] **Yêu cầu 2:** Sử dụng AI để tìm kiếm sơ bộ và lập danh sách 20 lỗi phần mềm nổi tiếng.
+- [x] **Yêu cầu 3:** Sử dụng AI để thiết kế các ca kiểm thử chức năng cơ bản cho cây quạt máy.
+- [x] Không sử dụng AI cho các mục chống gian lận (quay video, ảnh thẻ sinh viên, viết mã kiểm thử thực tế).
 
-### 7.2. Tình trạng hoàn thành các Biểu mẫu bắt buộc
-- **Cam kết nhận thức của sinh viên (AI 06 Student Acknowledgement):** [Đã ký và nộp / Chưa hoàn thành]
-- **Bản khai báo cộng tác AI (AI 03 AI Disclosure Form):** [Đã điền và ký / Chưa hoàn thành]
-- **Checklist bảo mật thông tin AI (AI 05 AI Privacy Checklist):** [Đã điền và ký / Chưa hoàn thành]
+### 6.2. Tình trạng hoàn thành các Biểu mẫu bắt buộc
+- **Báo cáo kiểm toán AI (AI 02 AI Audit Report):** [Đã điền và ký]
+- **Cam kết nhận thức của sinh viên (AI 06 Student Acknowledgement):** [Đã điền và ký]
+- **Bản khai báo cộng tác AI (AI 03 AI Disclosure Form):** [Đã điền và ký]
+- **Checklist bảo mật thông tin AI (AI 05 AI Privacy Checklist):** [Đã điền và ký]
 
 ---
 *Báo cáo được kết thúc tại đây.*
