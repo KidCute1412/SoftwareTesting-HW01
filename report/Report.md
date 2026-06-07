@@ -903,21 +903,21 @@ Hồ Tuấn Thanh
 
 | ID | Mục tiêu kiểm thử (Objective) | Đầu vào (Input) | Các bước thực hiện (Steps) | Kết quả mong đợi (Expected) | Kết quả thực tế (Actual) | Đánh giá (Verdict) | Biên/Đặc biệt? |
 |:---:|---|---|---|---|---|:---:|:---:|
-| TC01 | | | | | | | Không |
-| TC02 | | | | | | | Không |
-| TC03 | | | | | | | Không |
-| TC04 | | | | | | | Không |
-| TC05 | | | | | | | Không |
-| TC06 | | | | | | | Không |
-| TC07 | | | | | | | Không |
-| TC08 | | | | | | | Không |
-| TC09 | | | | | | | Không |
-| TC10 | | | | | | | Không |
-| TC11 | | | | | | | Không |
-| TC12 | | | | | | | Không |
-| TC13 | | | | | | | Có |
-| TC14 | | | | | | | Có |
-| TC15 | | | | | | | Có |
+| TC01 | Kiểm tra tính năng khởi động quạt ở tốc độ thấp nhất (Mức 1). | Nhấn nút số 1 khi quạt đang tắt và cắm điện. | 1. Cắm dây nguồn vào ổ điện.<br>2. Nhấn nút tốc độ 1 trên thân quạt. | Cánh quạt bắt đầu quay và hoạt động ổn định ở tốc độ thấp, tạo ra luồng gió nhẹ. | Quạt hoạt động êm, gió nhẹ | Đạt | Không |
+| TC02 | Kiểm tra tính năng hoạt động quạt ở tốc độ trung bình (Mức 2). | Nhấn nút số 2 khi quạt đang tắt và cắm điện. | 1. Cắm dây nguồn vào ổ điện.<br>2. Nhấn nút tốc độ 2 trên thân quạt. | Cánh quạt bắt đầu quay và hoạt động ổn định ở tốc độ trung bình, luồng gió mạnh hơn mức 1. | Quạt hoạt động êm, gió mạnh hơn mức 1 | Đạt | Không |
+| TC03 | Kiểm tra tính năng hoạt động quạt ở tốc độ cao nhất (Mức 3). | Nhấn nút số 3 khi quạt đang tắt và cắm điện. | 1. Cắm dây nguồn vào ổ điện.<br>2. Nhấn nút tốc độ 3 trên thân quạt. | Cánh quạt bắt đầu quay và hoạt động ổn định ở tốc độ cao nhất, luồng gió mạnh nhất. | Quạt hoạt động êm, gió mạnh hơn mức 1 và 2 | Đạt | Không |
+| TC04 | Kiểm tra chức năng tắt quạt bằng nút OFF (0). | Nhấn nút số 0 khi quạt đang hoạt động ở số 3. | 1. Cắm nguồn và bật quạt ở mức số 3.<br>2. Nhấn nút số 0 trên thân quạt. | Cánh quạt quay chậm dần rồi dừng hẳn, đèn báo hiệu (nếu có) tắt. | Cánh quạt quay chậm dần và dừng hẳn | Đạt | Không |
+| TC05 | Kiểm tra tính năng chuyển hướng quay qua lại của quạt (Oscillation). | Nhấn nút tuốc năng xuống khi quạt đang chạy. | 1. Cắm nguồn và bật quạt ở mức số 1.<br>2. Ấn nút tuốc năng phía sau hộp động cơ xuống. | Đầu quạt bắt đầu quay đều từ trái sang phải và ngược lại với góc quay tiêu chuẩn. | Quạt quay qua quay lại đều với mức gió chuẩn mức số 1 | Đạt | Không |
+| TC06 | Kiểm tra tính năng dừng quay chuyển hướng của quạt. | Kéo nút tuốc năng lên khi quạt đang quay chuyển hướng. | 1. Bật quạt chạy ở trạng thái quay chuyển hướng.<br>2. Kéo nút tuốc năng phía sau động cơ lên. | Đầu quạt dừng quay chuyển hướng ngay lập tức và giữ cố định ở hướng hiện tại. | Đầu quạt dừng quay chuyển hướng ngay khi kéo nút tuốc năng phái sau động cơ lên | Đạt | Không |
+| TC07 | Kiểm tra chức năng điều chỉnh góc ngửa của đầu quạt hướng lên trên (Tilt up). | Dùng tay tác động lực hướng lên vào đầu quạt. | 1. Giữ vững đế quạt.<br>2. Dùng tay đẩy nhẹ đầu quạt ngửa lên trên cho đến khi nghe tiếng khớp cố định. | Đầu quạt hướng lên trên ở góc tiêu chuẩn, khớp giữ chắc chắn và không bị tự rơi gập xuống khi quạt hoạt động. | Đầu quạt hướng lên trên và giữ chắc chắn, không bị tự rơi gập xuống khi quạt hoạt động | Đạt | Không |
+| TC08 | Kiểm tra chức năng điều chỉnh góc cúi của đầu quạt hướng xuống dưới (Tilt down). | Dùng tay tác động lực hướng xuống vào đầu quạt. | 1. Giữ vững đế quạt.<br>2. Dùng tay đẩy nhẹ đầu quạt cúi xuống dưới cho đến khi nghe tiếng khớp cố định. | Đầu quạt hướng xuống dưới ở góc tiêu chuẩn, khớp giữ chắc chắn và không bị tự ngửa lên khi quạt hoạt động. | Đầu quạt hướng xuống dưới và giữ chắc chắn, không bị tự ngửa lên khi quạt hoạt động | Đạt | Không |
+| TC09 | Kiểm tra độ an toàn của lồng quạt bảo vệ (Safety Grill). | Kiểm tra khoảng cách các nan lồng quạt bằng dụng cụ giả lập ngón tay trẻ em. | 1. Lắp lồng quạt chắc chắn.<br>2. Dùng que thử tiêu chuẩn (hoặc kiểm tra trực quan) xem nan quạt có đủ khít để chặn ngón tay chạm vào cánh quạt đang quay. | Khe hở giữa các nan lồng quạt đủ nhỏ, không cho phép ngón tay chạm tới cánh quạt đang quay. | Khe hở quạt vẫn còn phần bị rộng, ngón tay có thể chạm tới cánh quạt đang quay | Không đạt | Không |
+| TC10 | Kiểm tra tính năng cắm nguồn và ổn định phích cắm. | Cắm phích cắm vào ổ điện chuẩn 220V. | 1. Cắm phích cắm quạt vào ổ điện gia dụng.<br>2. Đảm bảo phích cắm vừa khít và không bị lỏng lẻo. | Phích cắm kết nối ổn định, không có hiện tượng tia lửa điện hay lỏng lẻo khi lay nhẹ dây nguồn. | Phích cắm bị lỏng khi cắm ổ điện gia dụng, dễ bị hở điện khi tác động dây cắm | Không đạt | Không |
+| TC11 | Kiểm tra việc ngắt điện đột ngột bằng cách rút phích cắm. | Rút phích cắm khi quạt đang quay ở số 3. | 1. Cho quạt chạy ổn định ở mức số 3.<br>2. Rút trực tiếp phích cắm điện ra khỏi ổ cắm. | Quạt dừng hoạt động ngay lập tức và dừng quay dần theo quán tính mà không bị chập điện hay hỏng hóc. | Quạt dừng hoạt động và dừng quay dần theo quán tính và không bị chập điện | Đạt | Không |
+| TC12 | Kiểm tra chuyển đổi tốc độ liên tục tăng dần. | Nhấn liên tiếp các nút tốc độ tăng dần (1 -> 2 -> 3). | 1. Bật quạt ở mức số 1.<br>2. Nhấn phím số 2.<br>3. Nhấn phím số 3. | Quạt chuyển đổi mượt mà tốc độ gió từ nhẹ sang trung bình và mạnh, phím nhấn cũ tự nảy lên. | [Chờ thực thi] | [Chờ đánh giá] | Không |
+| TC13 | Kiểm tra chuyển đổi tốc độ giảm dần. | Nhấn liên tiếp các nút tốc độ giảm dần (3 -> 2 -> 1). | 1. Bật quạt ở mức số 3.<br>2. Nhấn phím số 2.<br>3. Nhấn phím số 1. | Quạt chuyển đổi mượt mà tốc độ gió giảm dần, phím cũ tự nảy lên và phím mới được khóa cố định. | [Chờ thực thi] | [Chờ đánh giá] | Có |
+| TC14 | Kiểm tra độ ổn định của quạt khi chạy trên mặt phẳng nghiêng 10 độ. | Đặt quạt hoạt động ở số 3 trên bề mặt dốc nhẹ. | 1. Đặt quạt trên bề mặt nghiêng khoảng 10 độ.<br>2. Bật quạt chạy ở tốc độ cao nhất (số 3). | Quạt đứng vững vàng, không bị đổ ngã hoặc dịch chuyển vị trí do rung lắc trong 5 phút. | [Chờ thực thi] | [Chờ đánh giá] | Có |
+| TC15 | Kiểm tra khả năng hoạt động ổn định liên tục. | Cho quạt chạy liên tục ở mức số 3 trong vòng 1 giờ. | 1. Đặt quạt ở nơi thông thoáng.<br>2. Bật quạt chạy ở mức số 3.<br>3. Theo dõi hoạt động của quạt liên tục trong 1 giờ. | Quạt hoạt động liên tục bình thường, động cơ không bị nóng quá tải (bốc khói/chập điện) và duy trì tốc độ ổn định. | [Chờ thực thi] | [Chờ đánh giá] | Có |
 
 ### 4.4. Minh chứng AI bỏ sót các ca biên
 - **Ảnh chụp cuộc hội thoại với AI chứng minh bỏ sót:**
