@@ -38,7 +38,7 @@ I have read and understood the AI Use Agreement for the CS423 / CSC15003 Softwar
 | **Course:** | CS423 / CSC13003 – Software Testing |
 | **Instructor:** | Dr. Lam Quang Vu / Dr. Tran Duy Hoang / MSc. Tran Thi Bich Hanh / MSc. Truong Phuoc Loc / MSc. Ho Tuan Thanh |
 | **Date:** | 08/06/2026 |
-| **Signature:** | Lê Tuấn Lộc |
+| **Signature:** | <img src="images/Signal.png" width="100" /> |
 
 ## **References**
 

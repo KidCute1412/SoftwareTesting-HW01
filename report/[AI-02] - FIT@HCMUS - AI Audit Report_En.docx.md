@@ -68,7 +68,7 @@ Based on the audit of AI-generated artifacts, several key patterns were observed
 | **Course:** | CS423 / CSC13003 – Software Testing |
 | **Instructor:** | Dr. Lam Quang Vu / Dr. Tran Duy Hoang / MSc. Tran Thi Bich Hanh / MSc. Truong Phuoc Loc / MSc. Ho Tuan Thanh |
 | **Date:** | 08/06/2026 |
-| **Signature:** | Lê Tuấn Lộc |
+| **Signature:** | <img src="images/Signal.png" width="100" /> |
 
 ## **References**
 

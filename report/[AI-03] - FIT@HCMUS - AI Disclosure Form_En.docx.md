@@ -74,7 +74,7 @@ Google. (2026). Gemini 3.5 Flash in Antigravity [Large language model]. https://
 | **Course:** | CS423 / CSC13003 – Software Testing |
 | **Instructor:** | Dr. Lam Quang Vu / Dr. Tran Duy Hoang / MSc. Tran Thi Bich Hanh / MSc. Truong Phuoc Loc / MSc. Ho Tuan Thanh |
 | **Date:** | 08/06/2026 |
-| **Signature:** | Lê Tuấn Lộc |
+| **Signature:** | <img src="images/Signal.png" width="100" /> |
 
 ## **References**
 
